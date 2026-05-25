@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -12,7 +13,8 @@ const products = [
     description:
       'Onze laboratoriumwerkbanken worden volledig op maat gefabriceerd in onze Nederlandse fabriek. Met geïntegreerde gas-, water- en elektriciteitsaansluitingen, verzonken spoelbakken en chemisch-resistente oppervlakken voor elke toepassing.',
     materials: ['HPL', '316L Staal', 'Epoxy'],
-    gradient: 'linear-gradient(145deg, #161C22 0%, #0C1016 50%, #080C0E 100%)',
+    image: '/images/hero-lab.jpg',
+    imageAlt: 'S+B laboratoriumwerkbanken — witte werkbanken met blauwe accenten en geïntegreerde services',
     imageLeft: true,
   },
   {
@@ -20,29 +22,32 @@ const products = [
     title: 'Afzuigkasten & Extractie',
     subtitle: 'Precisie extractiemeubilair voor gevaarlijke stoffen',
     description:
-      'Laboratoriumafzuigkasten en lokale extractiesystemen, ontworpen voor maximale veiligheid en minimaal energieverbruik. Beschikbaar in VAV-uitvoering met automatische snelheidsregeling voor variabele belasting.',
+      'Laboratoriumafzuigkasten en lokale extractiesystemen, ontworpen voor maximale veiligheid en minimaal energieverbruik. Beschikbaar in VAV-uitvoering met automatische snelheidsregeling voor variabele belasting. Volledig conform EN 14175.',
     materials: ['Poedercoating', 'Polypropeen', 'Staal'],
-    gradient: 'linear-gradient(145deg, #1A1612 0%, #100D0A 50%, #080604 100%)',
+    image: '/images/universiteit-twente.jpg',
+    imageAlt: 'S+B afzuigkasten Universiteit Twente — blauwe afzuigkasten met VAV-regeling en houten krukken',
     imageLeft: false,
   },
   {
     number: '03',
-    title: 'Technisch Meubilair',
-    subtitle: 'Industriële werkstations met geïntegreerd kabelmanagement',
+    title: 'Opslagsystemen',
+    subtitle: 'Hoogwaardige opslagwanden voor laboratoriumbenodigdheden',
     description:
-      'Robuuste technische werkbanken voor de maakindustrie. Draagvermogen tot 800 kg, volledig verstelbaar in hoogte, met geïntegreerde kabelmanagement-systemen en ergonomische accessoires voor elke productieomgeving.',
-    materials: ['Gecoat Staal', 'Linoleum', 'Aluminium'],
-    gradient: 'linear-gradient(145deg, #181814 0%, #100F0C 50%, #080806 100%)',
+      'Modulaire opslagkasten en hoge opslagwanden voor laboratoria en technische omgevingen. Voorzien van schuifrail en bijpassende ladder voor veilige toegang tot hogere planken. Gecertificeerd voor opslag van gevaarlijke stoffen conform ADR/REACH.',
+    materials: ['Gecoat Staal', 'Aluminium', 'Veiligheidslas'],
+    image: '/images/storage-cabinet.jpg',
+    imageAlt: 'S+B opslagkasten laboratorium — hoge witte kasten met glazen deuren en aluminium ladder',
     imageLeft: true,
   },
   {
     number: '04',
-    title: 'Opslagkasten & Gevaarlijke stoffen',
-    subtitle: 'Chemisch veilige opslagsystemen conform ADR/REACH',
+    title: 'Maatwerk Werkstations',
+    subtitle: 'Precision-engineered dark lab furniture',
     description:
-      'Gecertificeerde opslag voor gevaarlijke stoffen, chemicaliën en vloeistoffen. Vloeistofdicht lekbak, brandwerende uitvoering beschikbaar, REACH-conform labeling-systeem en aardingspunten voor antistatische beveiliging.',
-    materials: ['Gecoat Staal', '304 RVS', 'Polyethyleen'],
-    gradient: 'linear-gradient(145deg, #141616 0%, #0C0E0E 50%, #060808 100%)',
+      'Onze donkere laboratoriumlijn combineert industriële robuustheid met een premium esthetiek. Volledig op maat gefabriceerd, uitgerust met digitale panelen, geïntegreerde verlichting en ergonomisch ontworpen lab-stools — voor omgevingen waar precisie en uitstraling samenkomen.',
+    materials: ['Zwart HPL', 'Gepoedercoat Staal', 'LED'],
+    image: '/images/dark-lab.jpg',
+    imageAlt: 'S+B maatwerk donker laboratoriuminterieur — zwarte kasten met geïntegreerde verlichting en laboratoriumstoelen',
     imageLeft: false,
   },
 ]
@@ -65,22 +70,18 @@ function ProductSection({ product, index }: ProductSectionProps) {
       transition={{ duration: 0.9, ease: EASE }}
       aria-label={product.title}
     >
-      {/* Background gradient placeholder */}
-      {/* <!-- REPLACE WITH: close-up product photography of {product.title} --> */}
-      <div
-        data-replace="true"
-        className="absolute inset-0"
-        style={{ background: product.gradient }}
-        aria-hidden="true"
+      {/* Real product photography */}
+      <Image
+        src={product.image}
+        alt={product.imageAlt}
+        fill
+        sizes="100vw"
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
+        className="opacity-70"
       />
-
-      {/* Fine grid texture */}
+      {/* Dark overlay for text legibility */}
       <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            'repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(184,169,140,0.02) 59px, rgba(184,169,140,0.02) 60px)',
-        }}
+        className="absolute inset-0 bg-sb-black/50 pointer-events-none"
         aria-hidden="true"
       />
 

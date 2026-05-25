@@ -1,60 +1,86 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
 const projects = [
   {
     number: '01',
-    title: 'Academisch Laboratorium, Utrecht',
-    industry: 'Universiteit',
+    title: 'FrieslandCampina',
+    location: 'Wageningen',
+    industry: 'Food & Research',
     type: 'Onderzoekslaboratorium',
-    area: '850m²',
+    area: 'Wageningen',
     description:
-      'Een volledig geïntegreerd onderzoekslaboratorium voor de Universiteit Utrecht. Ontworpen voor multidisciplinair gebruik met gespecialiseerde zones voor chemisch, biologisch en fysisch onderzoek. Elke werkbank is op maat gefabriceerd met geïntegreerde services.',
-    materials: ['HPL', 'Staal', 'Glas', 'Linoleum'],
+      'Volledig geïntegreerd onderzoekslaboratorium voor FrieslandCampina in Wageningen. Maatwerk eilandwerkbanken met groene accenten, glazen laboratoriumwanden en geïntegreerde afzuigkasten. Ontworpen voor intensief dagelijks gebruik in een professionele R&D-omgeving.',
+    materials: ['HPL', 'Compact Laminaat', 'Glas', 'Aluminium'],
     stats: [
-      { value: '120', label: 'werkplekken' },
-      { value: '8', label: 'laboratoria' },
-      { value: '6', label: 'maanden' },
+      { value: '3', label: 'laboratoria' },
+      { value: 'NEN', label: 'gecertificeerd' },
+      { value: 'R&D', label: 'omgeving' },
     ],
-    gradient: 'linear-gradient(135deg, #161C24 0%, #0C1018 50%, #080C10 100%)',
+    image: '/images/frieslandcampina.jpg',
+    imageAlt: 'FrieslandCampina laboratoriuminterieur Wageningen — witte werkbanken met groene accenten en glazen wanden',
     imageRight: false,
   },
   {
     number: '02',
-    title: 'Practicumvleugel, Amsterdam',
-    industry: 'MBO/HBO Onderwijs',
-    type: 'Onderwijsomgeving',
-    area: '620m²',
+    title: 'Universiteit Twente',
+    location: 'Enschede',
+    industry: 'Academisch',
+    type: 'Onderzoekslaboratorium',
+    area: 'Enschede',
     description:
-      'Een complete practicumvleugel voor een grote MBO/HBO-instelling in Amsterdam. Flexibele lokalen die eenvoudig kunnen worden omgeconfigureerd voor verschillende vakken. Duurzame materialen, veiligheidsklasse NEN-12, volledig ARBO-conform.',
-    materials: ['Compact HPL', 'Aluminium'],
+      'Grootschalig universitair laboratorium voor de Universiteit Twente, uitgerust met een complete wand van professionele afzuigkasten. De blauwe afzuigkasten zijn voorzien van VAV-regeling voor variabel luchtvolumetransport en zijn volledig conform EN 14175. Hoogwaardige opslagsystemen met ladderRail voor de grote opslagwanden.',
+    materials: ['Staal', 'HPL', 'Glas', 'Gecoat aluminium'],
     stats: [
-      { value: '24', label: 'lokalen' },
-      { value: '480', label: 'leerlingen' },
-      { value: '8', label: 'maanden' },
+      { value: 'EN', label: '14175 conform' },
+      { value: 'VAV', label: 'afzuigregeling' },
+      { value: 'WO', label: 'onderzoek' },
     ],
-    gradient: 'linear-gradient(135deg, #1E1A12 0%, #14100A 50%, #0C0A06 100%)',
+    image: '/images/universiteit-twente.jpg',
+    imageAlt: 'Universiteit Twente laboratorium Enschede — blauwe afzuigkasten en werkbanken met houten krukken',
     imageRight: true,
   },
   {
     number: '03',
-    title: 'Industrieel Testcentrum, Rotterdam',
-    industry: 'Industrieel',
-    type: 'Testcentrum',
-    area: '1.200m²',
+    title: 'Danone',
+    location: 'Utrecht',
+    industry: 'Food & Nutrition',
+    type: 'Onderzoekscentrum',
+    area: 'Utrecht',
     description:
-      'Een grootschalig industrieel testcentrum voor een toonaangevende productiefaciliteit in Rotterdam. Zware industriële werkbanken, geïntegreerde tilsystemen, explosieveilige zones en een complete extractie-installatie conform ATEX-richtlijnen.',
-    materials: ['Staal', 'Beton', 'Gecoat aluminium'],
+      'Iconisch open laboratoriumconcept voor Danone Utrecht. De rondingswerkbanken met geïntegreerde servicekolommen zijn volledig op maat ontworpen. De gebogen witte HPL-bladen met blauwe servicekokers creëren een luchtig, ergonomisch werkconcept over een groot vloeroppervlak.',
+    materials: ['HPL wit', 'Blauw Compact', 'Staal'],
     stats: [
-      { value: '45', label: 'werkstations' },
-      { value: 'ISO', label: 'gecertificeerd' },
-      { value: '12', label: 'maanden' },
+      { value: '400+', label: 'm² laboratorium' },
+      { value: 'Custom', label: 'rondingsontwerp' },
+      { value: 'GMP', label: 'conform' },
     ],
-    gradient: 'linear-gradient(135deg, #1A1816 0%, #100E0C 50%, #080706 100%)',
+    image: '/images/danone.jpg',
+    imageAlt: 'Danone laboratorium Utrecht — ronde witte werkbanken met blauwe servicekokers in grote open ruimte',
     imageRight: false,
+  },
+  {
+    number: '04',
+    title: 'Sanquin',
+    location: 'Amsterdam',
+    industry: 'Medisch / Bloedonderzoek',
+    type: 'Medisch Laboratorium',
+    area: 'Amsterdam',
+    description:
+      'Medisch laboratoriuminterieur voor Sanquin in Amsterdam. Stalen draagstructuur met HPL-bladen, afzuigarmen en gespecialiseerde medische kasten. De oranje accenten op de afzuigkast geven het lab een herkenbare visuele identiteit. Volledig ARBO- en ISO-conform voor bloedonderzoek en medische diagnostiek.',
+    materials: ['HPL grijs', 'Staal', 'Oranje HPL-accent'],
+    stats: [
+      { value: 'ISO', label: 'gecertificeerd' },
+      { value: 'ARBO', label: 'conform' },
+      { value: 'Medisch', label: 'diagnostiek' },
+    ],
+    image: '/images/sanquin-wide.jpg',
+    imageAlt: 'Sanquin laboratorium Amsterdam — grijze stalen werkbanken met blauwe muuraccenten en medische uitrusting',
+    imageRight: true,
   },
 ]
 
@@ -76,31 +102,27 @@ function ProjectItem({ project, index }: ProjectProps) {
     >
       {/* Image area — 60% */}
       <div className="relative lg:w-[60%] overflow-hidden" style={{ minHeight: '520px' }}>
-        {/* <!-- REPLACE WITH: professional project photography for {project.title} --> */}
+        <Image
+          src={project.image}
+          alt={project.imageAlt}
+          fill
+          sizes="(max-width: 1024px) 100vw, 60vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          className="transition-transform duration-700 group-hover:scale-105"
+        />
+        {/* Subtle dark overlay */}
         <div
-          data-replace="true"
-          className="absolute inset-0"
-          style={{ background: project.gradient }}
+          className="absolute inset-0 bg-sb-black/30 pointer-events-none"
           aria-hidden="true"
         />
 
-        {/* Subtle texture */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-20"
-          style={{
-            backgroundImage:
-              'repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(184,169,140,0.03) 40px, rgba(184,169,140,0.03) 41px)',
-          }}
-          aria-hidden="true"
-        />
-
-        {/* Area badge */}
+        {/* Location badge */}
         <div className="absolute top-6 left-6 z-10">
           <span
             className="inline-block px-3 py-1.5 border border-sb-border bg-sb-black/60 font-sans text-sb-text-muted backdrop-blur-sm"
             style={{ fontSize: '0.6875rem', letterSpacing: '0.15em' }}
           >
-            {project.area}
+            {project.location}
           </span>
         </div>
       </div>
@@ -121,9 +143,10 @@ function ProjectItem({ project, index }: ProjectProps) {
         </span>
 
         {/* Title */}
-        <h3 className="font-serif text-display-md text-sb-text font-light mb-5">
+        <h3 className="font-serif text-display-md text-sb-text font-light mb-1 leading-none">
           {project.title}
         </h3>
+        <p className="font-sans text-sb-text-dim text-sm tracking-wide mb-5">{project.location}</p>
 
         {/* Description */}
         <p className="font-sans font-light text-sb-text-muted text-base mb-8" style={{ lineHeight: '1.75' }}>
