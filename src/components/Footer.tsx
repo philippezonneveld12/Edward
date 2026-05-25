@@ -52,7 +52,7 @@ export default function Footer() {
               S<span className="text-sb-accent">+</span>B
             </a>
             <p className="font-sans font-light text-sb-text-muted text-sm max-w-sm" style={{ lineHeight: '1.7' }}>
-              Specialist in laboratoriuminterieurs, practicumlokalen en industriële werkplekken op maat. Opgericht 1987, actief in Europa.
+              100 jaar marktleider in laboratoriuminterieurs, practicumlokalen en industriële werkplekken op maat. Gevestigd in Capelle aan den IJssel, actief in heel Europa.
             </p>
           </div>
 
@@ -66,11 +66,9 @@ export default function Footer() {
               <div className="space-y-3">
                 <p className="font-sans font-light text-sb-text-muted text-sm" style={{ lineHeight: '1.7' }}>
                   Schaik & Berghuis Groep B.V.<br />
+                  Postbus 256<br />
+                  2900 AG Capelle aan den IJssel<br />
                   Nederland
-                </p>
-                <p className="font-sans font-light text-sb-text-dim text-xs" style={{ lineHeight: '1.7' }}>
-                  KvK: 00000000<br />
-                  BTW: NL000000000B00
                 </p>
               </div>
             </div>
@@ -126,10 +124,10 @@ export default function Footer() {
                   info@splusb.nl
                 </a>
                 <a
-                  href="tel:+31000000000"
+                  href="tel:+31102582580"
                   className="block font-sans font-light text-sb-text-muted text-sm hover:text-sb-accent transition-colors duration-300"
                 >
-                  +31 (0)00 000 0000
+                  +31 (0)10 258 25 80
                 </a>
               </div>
               <a

@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -34,17 +35,26 @@ export default function Hero() {
       className="relative w-full overflow-hidden"
       style={{ height: '100svh', minHeight: '600px' }}
     >
-      {/* Background gradient — REPLACE WITH: full-bleed photography of a premium laboratory interior */}
+      {/* Full-bleed hero photograph */}
+      <Image
+        src="/images/hero-lab.jpg"
+        alt="S+B laboratoriuminterieur — witte werkbanken met blauwe accenten"
+        fill
+        priority
+        sizes="100vw"
+        style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
+        className="opacity-55"
+        aria-hidden="true"
+      />
+      {/* Dark gradient overlay for text legibility */}
       <div
-        data-replace="true"
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse at 30% 60%, #2A2520 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, #1E1C18 0%, transparent 40%), linear-gradient(160deg, #0B0B09 0%, #1C1A16 40%, #141210 70%, #0B0B09 100%)',
+            'linear-gradient(160deg, rgba(11,11,9,0.55) 0%, rgba(11,11,9,0.3) 40%, rgba(11,11,9,0.7) 100%)',
         }}
         aria-hidden="true"
       />
-      {/* <!-- REPLACE WITH: high-resolution laboratory/industrial interior photography --> */}
 
       {/* CSS grid texture overlay */}
       <div
@@ -78,7 +88,7 @@ export default function Hero() {
           className="text-sb-text-dim font-sans"
           style={{ fontSize: '0.625rem', letterSpacing: '0.25em', textTransform: 'uppercase' }}
         >
-          Est. 1987 — Netherlands
+          S+B — 100 Jaar Marktleider
         </span>
       </motion.div>
 

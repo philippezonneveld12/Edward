@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -8,57 +9,65 @@ const categories = [
   {
     number: '01',
     name: 'Labomeubilair',
-    description: 'Engineered lab benches for every discipline',
-    gradient: 'linear-gradient(135deg, #1A1E24, #0E1218)',
+    description: 'Maatwerk werkbanken voor elk laboratoriumdiscipline',
+    image: '/images/hero-lab.jpg',
+    imageAlt: 'Laboratoriumwerkbanken S+B',
     large: true,
   },
   {
     number: '02',
     name: 'Practicumlokalen',
-    description: 'Turn-key practical classroom environments',
-    gradient: 'linear-gradient(135deg, #201E18, #0F0E0B)',
+    description: 'Turn-key inrichting van onderwijspracticumlokalen',
+    image: '/images/frieslandcampina.jpg',
+    imageAlt: 'Practicumlokaal inrichting S+B',
     large: false,
   },
   {
     number: '03',
     name: 'Cleanrooms',
-    description: 'ISO-certified cleanroom construction',
-    gradient: 'linear-gradient(135deg, #1C2024, #0E1014)',
+    description: 'ISO-gecertificeerde cleanroomconstructie',
+    image: '/images/danone.jpg',
+    imageAlt: 'Cleanroom interieur S+B',
     large: false,
   },
   {
     number: '04',
     name: 'Industriële interieurs',
-    description: 'Heavy-duty industrial workspace solutions',
-    gradient: 'linear-gradient(135deg, #1E1C18, #111009)',
+    description: 'Robuuste industriële werkplekoplossingen',
+    image: '/images/dark-lab.jpg',
+    imageAlt: 'Industrieel laboratoriuminterieur S+B',
     large: false,
   },
   {
     number: '05',
     name: 'Ventilatiesystemen',
-    description: 'Precision airflow & extraction systems',
-    gradient: 'linear-gradient(135deg, #181C20, #0B0E12)',
+    description: 'Precisie luchttechniek & extractiesystemen',
+    image: '/images/universiteit-twente.jpg',
+    imageAlt: 'Afzuigkasten en ventilatiesystemen S+B',
     large: true,
   },
   {
     number: '06',
     name: 'Opslagsystemen',
-    description: 'Modular storage & chemical cabinet systems',
-    gradient: 'linear-gradient(135deg, #1C1A18, #100F0D)',
+    description: 'Modulaire opslag & chemicaliënkasten',
+    image: '/images/storage-cabinet.jpg',
+    imageAlt: 'Opslagkasten laboratorium S+B',
     large: false,
   },
   {
     number: '07',
     name: 'Ergonomische werkplekken',
-    description: 'Adjustable, safety-first workstations',
-    gradient: 'linear-gradient(135deg, #1E1C1A, #100F0D)',
+    description: 'Hoogteversttelbare, veiligheidsgerichte werkstations',
+    image: '/images/sanquin-wide.jpg',
+    imageAlt: 'Ergonomische werkplekken S+B',
     large: false,
   },
   {
     number: '08',
     name: 'Technische werkbanken',
-    description: 'Custom technical furniture & benching',
-    gradient: 'linear-gradient(135deg, #1A1C1E, #0D0F11)',
+    description: 'Maatwerk technisch meubilair & werkbanksystemen',
+    image: '/images/frieslandcampina-detail.jpg',
+    imageAlt: 'Technische werkbanken detail S+B',
     large: false,
   },
 ]
@@ -72,9 +81,8 @@ interface CardProps {
 function CollectionCard({ category, index, gridStyle }: CardProps) {
   return (
     <motion.article
-      className="collection-card relative overflow-hidden cursor-pointer group"
+      className="collection-card relative overflow-hidden cursor-pointer group bg-sb-surface"
       style={{
-        background: category.gradient,
         minHeight: category.large ? '420px' : '300px',
         ...gridStyle,
       }}
@@ -84,12 +92,14 @@ function CollectionCard({ category, index, gridStyle }: CardProps) {
       transition={{ duration: 0.7, delay: index * 0.05, ease: EASE }}
       whileHover={{ scale: 1.012 }}
     >
-      {/* <!-- REPLACE WITH: product photography for category: {category.name} --> */}
-      <div
-        data-replace="true"
-        className="absolute inset-0"
-        style={{ background: category.gradient }}
-        aria-hidden="true"
+      {/* Real photography */}
+      <Image
+        src={category.image}
+        alt={category.imageAlt}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
+        className="transition-transform duration-700 group-hover:scale-105 opacity-75"
       />
 
       {/* Hover overlay */}

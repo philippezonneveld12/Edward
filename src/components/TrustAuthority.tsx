@@ -6,7 +6,7 @@ import { motion, useInView } from 'framer-motion'
 const EASE = [0.16, 1, 0.3, 1] as const
 
 const stats = [
-  { value: 35, suffix: '+', label: 'Jaar ervaring', description: 'Opgericht in 1987' },
+  { value: 100, suffix: '', label: 'Jaar marktleider', description: 'Marktleider in laboratoriuminterieurs' },
   { value: 2400, suffix: '+', label: 'Projecten gerealiseerd', description: 'Verspreid over Europa' },
   { value: 12, suffix: '', label: 'Landen geleverd', description: 'Internationaal netwerk' },
   { value: 98, suffix: '%', label: 'Klanttevredenheid', description: 'Gemeten over 5 jaar' },
