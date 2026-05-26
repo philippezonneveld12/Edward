@@ -179,7 +179,7 @@ export default function Navigation() {
 
               {/* CTA button — desktop */}
               <a
-                href="mailto:info@splusb.nl?subject=Offerte aanvragen"
+                href="mailto:info@splusb.nl?subject=Projectgesprek plannen"
                 className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-[12px] font-sans font-[500] tracking-widest uppercase transition-all duration-300"
                 style={{
                   border: `1px solid ${textOnDark ? 'rgba(244,241,236,0.35)' : 'rgba(154,138,108,0.4)'}`,
@@ -326,7 +326,7 @@ export default function Navigation() {
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
                 <a
-                  href="mailto:info@splusb.nl?subject=Offerte aanvragen"
+                  href="mailto:info@splusb.nl?subject=Projectgesprek plannen"
                   className="inline-flex items-center gap-3 px-8 py-4 text-[13px] font-sans font-[500] tracking-widest uppercase transition-all duration-300"
                   style={{ border: '1px solid var(--color-accent)', color: 'var(--color-accent)' }}
                 >

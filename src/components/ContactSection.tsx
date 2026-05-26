@@ -51,13 +51,13 @@ export default function ContactSection() {
                   href="tel:+31102582580"
                   className="font-sans font-light text-sb-text text-lg hover:text-sb-accent transition-colors duration-300"
                 >
-                  +31 (0)10 258 25 80
+                  +31 10 258 25 80
                 </a>
               </div>
             </div>
 
             <a
-              href="mailto:info@splusb.nl?subject=Offerte aanvragen"
+              href="mailto:info@splusb.nl?subject=Projectgesprek plannen"
               className="inline-flex items-center gap-3 px-8 py-4 font-sans font-light text-sm tracking-widest uppercase transition-all duration-300"
               style={{ border: '1px solid var(--color-accent)', color: 'var(--color-accent)' }}
               onMouseEnter={e => {

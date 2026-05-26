@@ -4,17 +4,17 @@ const nl = {
   nav: {
     links: ['Oplossingen', 'Projecten', 'Expertise', 'Over S+B', 'Contact'],
     cta: 'Plan een projectgesprek',
-    mobileFooter: '100+ jaar ervaring — Nederland',
+    mobileFooter: 'Opgericht in 1899 — Nederland',
   },
   hero: {
-    badge: 'S+B — 100+ Jaar Vakmanschap',
+    badge: 'S+B — Opgericht 1899',
     overline: 'Laboratoria · Practicumlokalen · Industrie',
     heading: ['Ontwerp, productie', 'en realisatie van', 'laboratoria.'],
     subtitle: 'Specialist in de inrichting van laboratoria, practicumlokalen en industriële werkomgevingen. Eigen productie, installatie en onderhoud — van advies tot oplevering.',
     cta1: 'Bekijk oplossingen',
     cta2: 'Projecten',
     scroll: 'Scroll',
-    trustSignals: ['100+ jaar ervaring', 'Eigen productie & installatie', 'Van advies tot onderhoud'],
+    trustSignals: ['125+ jaar ervaring', 'Eigen productie & installatie', 'Van advies tot onderhoud'],
   },
   collection: {
     overline: 'Oplossingen',
@@ -63,7 +63,7 @@ const nl = {
   expertise: {
     overline: 'Vakkennis',
     heading: ['Expertise &', 'Vakkennis.'],
-    subheading: 'Meer dan 100 jaar ervaring vertaald in zes kerngebieden die de basis vormen van elk S+B-project. Van materiaalkunde tot luchttechniek — wij beheersen het complete vakgebied.',
+    subheading: 'Meer dan 125 jaar ervaring vertaald in zes kerngebieden die de basis vormen van elk S+B-project. Van materiaalkunde tot luchttechniek — wij beheersen het complete vakgebied.',
     pillars: [
       { label: 'Veiligheid & Normen', description: 'Volledig conform NEN-EN 14175, NPR 4500, ARBO en VPR-regelgeving. Elk ontwerp doorloopt een formeel veiligheidsauditproces inclusief zuurkastinspectie en luchtstroombewaking.' },
       { label: 'Ergonomie', description: 'Hoogteverstelling, houding-geoptimaliseerde ontwerpen en antropometrische analyse voor elke werkplek. Veilig en comfortabel werken in elke laboratoriumomgeving.' },
@@ -83,7 +83,7 @@ const nl = {
       { tagline: 'Practicumlokalen en onderwijsomgevingen', description: 'Practicumlokalen voor MBO, HBO en universiteiten. S+B Scholen realiseert flexibele, veilige leeromgevingen met practicummeubilair en technische installaties — decennialang meegaand.' },
       { tagline: 'Industriële werkplekken en maatwerk productie', description: 'Zware industriële werkstations, assemblagelijnen en testomgevingen. Solid Factory levert robuuste maatwerkoplossingen voor de maakindustrie, met focus op ergonomie, veiligheid en efficiëntie.' },
       { tagline: 'Luchttechnische oplossingen en zuurkasten', description: 'Specialistische zuurkasten, ventilatie- en afzuigsystemen voor laboratoriumomgevingen. Labair ontwerpt, installeert en inspecteert luchttechnische systemen conform NEN-EN 14175 en NPR 4500.' },
-      { tagline: 'De groep achter de merken', description: 'De moederorganisatie die strategie, engineering, fabricage en installatie integreert onder één dak. Meer dan 100 jaar ervaring, actief in heel Europa, met een eigen productiefaciliteit in Capelle aan den IJssel.' },
+      { tagline: 'De groep achter de merken', description: 'De moederorganisatie die strategie, engineering, fabricage en installatie integreert onder één dak. Meer dan 125 jaar ervaring, actief in heel Europa, met een eigen productiefaciliteit in Capelle aan den IJssel.' },
     ],
   },
   projects: {
@@ -104,7 +104,7 @@ const nl = {
       },
       {
         industry: 'Food & Nutrition',
-        description: 'Open laboratoriuminrichting voor Danone in Utrecht. Maatwerk rondingswerkbanken met geïntegreerde servicekolommen — gebogen witte HPL-werkbladen met blauwe servicekokers over meer dan 400 m² laboratoriumvloer. Werkzaamheden: conceptontwerp, engineering, productie en installatie.',
+        description: 'Open laboratoriuminrichting voor Danone in Utrecht. Maatwerk gebogen werkbanken met geïntegreerde servicekolommen — gebogen witte HPL-werkbladen met blauwe servicekokers over meer dan 400 m² laboratoriumvloer. Werkzaamheden: conceptontwerp, engineering, productie en installatie.',
         stats: [{ label: 'm² laboratorium' }, { label: 'maatwerk ontwerp' }, { label: 'GMP-conform' }],
       },
       {
@@ -118,7 +118,7 @@ const nl = {
     overline: 'Autoriteit',
     heading: ['Bewezen in', 'de praktijk.'],
     stats: [
-      { label: 'Jaar vakmanschap', description: 'Specialist in laboratorium- en onderwijsinrichting' },
+      { label: 'Opgericht', description: 'Specialist in laboratorium- en onderwijsinrichting' },
       { label: 'Projecten gerealiseerd', description: 'Verspreid over Europa' },
       { label: 'Landen geleverd', description: 'Internationaal netwerk' },
       { label: 'Klanttevredenheid', description: 'Gemeten over 5 jaar' },
@@ -148,10 +148,10 @@ const nl = {
     subheading: 'Wilt u weten wat S+B voor uw project kan betekenen? Wij denken graag mee — van oriëntatie tot volledige projectuitvoering.',
     emailLabel: 'E-mail',
     phoneLabel: 'Telefoon',
-    cta: 'Offerte aanvragen',
+    cta: 'Plan een projectgesprek',
   },
   footer: {
-    tagline: '100+ jaar specialist in laboratoriuminrichting, practicumlokalen en industriële werkplekken. Gevestigd in Capelle aan den IJssel, actief in heel Europa.',
+    tagline: '125+ jaar specialist in laboratoriuminrichting, practicumlokalen en industriële werkplekken. Gevestigd in Rotterdam, actief in heel Europa.',
     companyHeading: 'S+B Groep',
     divisionsHeading: 'Divisies',
     servicesHeading: 'Diensten',
@@ -171,17 +171,17 @@ const en: T = {
   nav: {
     links: ['Solutions', 'Projects', 'Expertise', 'About S+B', 'Contact'],
     cta: 'Schedule a project call',
-    mobileFooter: '100+ years expertise — Netherlands',
+    mobileFooter: 'Founded in 1899 — Netherlands',
   },
   hero: {
-    badge: 'S+B — 100+ Years of Expertise',
+    badge: 'S+B — Founded 1899',
     overline: 'Laboratories · Practice Rooms · Industry',
     heading: ['Design, production', 'and realisation of', 'laboratories.'],
     subtitle: 'Specialist in the fit-out of laboratories, practice rooms and industrial work environments. Own production, installation and maintenance — from advice to delivery.',
     cta1: 'View solutions',
     cta2: 'Projects',
     scroll: 'Scroll',
-    trustSignals: ['100+ years of expertise', 'Own production & installation', 'From advice to maintenance'],
+    trustSignals: ['125+ years of expertise', 'Own production & installation', 'From advice to maintenance'],
   },
   collection: {
     overline: 'Solutions',
@@ -230,7 +230,7 @@ const en: T = {
   expertise: {
     overline: 'Knowledge',
     heading: ['Expertise &', 'Knowledge.'],
-    subheading: 'Over 100 years of experience translated into six core areas that form the foundation of every S+B project. From material science to air technology — we master the complete field.',
+    subheading: 'Over 125 years of experience translated into six core areas that form the foundation of every S+B project. From material science to air technology — we master the complete field.',
     pillars: [
       { label: 'Safety & Standards', description: 'Fully compliant with NEN-EN 14175, NPR 4500, ARBO and VPR regulations. Every design undergoes a formal safety audit including fume hood inspection and airflow monitoring.' },
       { label: 'Ergonomics', description: 'Height adjustment, posture-optimised designs and anthropometric analysis for every workplace. Safe and comfortable working in every laboratory environment.' },
@@ -250,7 +250,7 @@ const en: T = {
       { tagline: 'Practice rooms and educational environments', description: 'Practice rooms for MBO, HBO and universities. S+B Scholen creates flexible, safe learning environments with practice furniture and technical installations — lasting for decades.' },
       { tagline: 'Industrial workplaces and custom production', description: 'Heavy industrial workstations, assembly lines and test environments. Solid Factory delivers robust custom solutions for the manufacturing industry, with a focus on ergonomics, safety and efficiency.' },
       { tagline: 'Air technology solutions and fume hoods', description: 'Specialist fume hoods, ventilation and extraction systems for laboratory environments. Labair designs, installs and inspects air technology systems in accordance with NEN-EN 14175 and NPR 4500.' },
-      { tagline: 'The group behind the brands', description: 'The parent organisation that integrates strategy, engineering, manufacturing and installation under one roof. Over 100 years of expertise, active throughout Europe, with its own production facility in Capelle aan den IJssel.' },
+      { tagline: 'The group behind the brands', description: 'The parent organisation that integrates strategy, engineering, manufacturing and installation under one roof. Over 125 years of expertise, active throughout Europe, with its own production facility in Capelle aan den IJssel.' },
     ],
   },
   projects: {
@@ -285,7 +285,7 @@ const en: T = {
     overline: 'Authority',
     heading: ['Proven in', 'practice.'],
     stats: [
-      { label: 'Years of expertise', description: 'Specialist in laboratory and educational fit-out' },
+      { label: 'Founded', description: 'Specialist in laboratory and educational fit-out' },
       { label: 'Projects realised', description: 'Across Europe' },
       { label: 'Countries served', description: 'International network' },
       { label: 'Client satisfaction', description: 'Measured over 5 years' },
@@ -315,10 +315,10 @@ const en: T = {
     subheading: 'Want to know what S+B can do for your project? We are happy to think along — from orientation to full project delivery.',
     emailLabel: 'Email',
     phoneLabel: 'Phone',
-    cta: 'Request quote',
+    cta: 'Schedule a project call',
   },
   footer: {
-    tagline: '100+ years specialist in laboratory fit-out, practice rooms and industrial workplaces. Based in Capelle aan den IJssel, active throughout Europe.',
+    tagline: '125+ years specialist in laboratory fit-out, practice rooms and industrial workplaces. Based in Rotterdam, active throughout Europe.',
     companyHeading: 'S+B Group',
     divisionsHeading: 'Divisions',
     servicesHeading: 'Services',
@@ -336,17 +336,17 @@ const de: T = {
   nav: {
     links: ['Lösungen', 'Projekte', 'Expertise', 'Über S+B', 'Kontakt'],
     cta: 'Projektgespräch planen',
-    mobileFooter: '100+ Jahre Erfahrung — Niederlande',
+    mobileFooter: 'Gegründet 1899 — Niederlande',
   },
   hero: {
-    badge: 'S+B — 100+ Jahre Erfahrung',
+    badge: 'S+B — Gegründet 1899',
     overline: 'Labore · Übungsräume · Industrie',
     heading: ['Entwurf, Produktion', 'und Realisierung von', 'Laboren.'],
     subtitle: 'Spezialist für die Einrichtung von Laboren, Übungsräumen und industriellen Arbeitsumgebungen. Eigene Produktion, Installation und Wartung — von der Beratung bis zur Übergabe.',
     cta1: 'Lösungen ansehen',
     cta2: 'Projekte',
     scroll: 'Scrollen',
-    trustSignals: ['100+ Jahre Erfahrung', 'Eigene Produktion & Installation', 'Von der Beratung bis zur Wartung'],
+    trustSignals: ['125+ Jahre Erfahrung', 'Eigene Produktion & Installation', 'Von der Beratung bis zur Wartung'],
   },
   collection: {
     overline: 'Lösungen',
@@ -395,7 +395,7 @@ const de: T = {
   expertise: {
     overline: 'Fachwissen',
     heading: ['Expertise &', 'Fachwissen.'],
-    subheading: 'Über 100 Jahre Erfahrung in sechs Kernbereichen, die die Grundlage jedes S+B-Projekts bilden. Von Materialwissen bis Lufttechnik — wir beherrschen das komplette Fachgebiet.',
+    subheading: 'Über 125 Jahre Erfahrung in sechs Kernbereichen, die die Grundlage jedes S+B-Projekts bilden. Von Materialwissen bis Lufttechnik — wir beherrschen das komplette Fachgebiet.',
     pillars: [
       { label: 'Sicherheit & Normen', description: 'Vollständig konform mit NEN-EN 14175, NPR 4500, ARBO und VPR-Vorschriften. Jedes Design durchläuft einen formalen Sicherheitsaudit inklusive Abzugsprüfung.' },
       { label: 'Ergonomie', description: 'Höhenverstellung, haltungsoptimierte Designs und anthropometrische Analyse für jeden Arbeitsplatz. Sicheres und komfortables Arbeiten in jeder Laborumgebung.' },
@@ -415,7 +415,7 @@ const de: T = {
       { tagline: 'Übungsräume und Bildungsumgebungen', description: 'Praxisräume für MBO, HBO und Universitäten. S+B Scholen realisiert flexible, sichere Lernumgebungen mit Übungsmöbeln und technischen Installationen — jahrzehntelang haltbar.' },
       { tagline: 'Industrielle Arbeitsplätze und maßgeschneiderte Produktion', description: 'Schwere industrielle Arbeitsstationen, Montagelinien und Testumgebungen. Solid Factory liefert robuste Maßlösungen für die Fertigungsindustrie, mit Fokus auf Ergonomie, Sicherheit und Effizienz.' },
       { tagline: 'Lufttechnische Lösungen und Abzüge', description: 'Spezialisierte Abzüge, Belüftungs- und Absaugsysteme für Laborumgebungen. Labair entwirft, installiert und prüft lufttechnische Systeme gemäß NEN-EN 14175 und NPR 4500.' },
-      { tagline: 'Die Gruppe hinter den Marken', description: 'Die Mutterorganisation, die Strategie, Engineering, Fertigung und Installation unter einem Dach integriert. Über 100 Jahre Erfahrung, tätig in ganz Europa, mit einer eigenen Produktionsstätte in Capelle aan den IJssel.' },
+      { tagline: 'Die Gruppe hinter den Marken', description: 'Die Mutterorganisation, die Strategie, Engineering, Fertigung und Installation unter einem Dach integriert. Über 125 Jahre Erfahrung, tätig in ganz Europa, mit einer eigenen Produktionsstätte in Capelle aan den IJssel.' },
     ],
   },
   projects: {
@@ -436,8 +436,8 @@ const de: T = {
       },
       {
         industry: 'Food & Nutrition',
-        description: 'Ikonisches offenes Laboratoriumskonzept für Danone Utrecht. Die Rundungswerkbänke mit integrierten Servicesäulen sind vollständig maßgeschneidert. Die gebogenen weißen HPL-Platten mit blauen Servicekanälen schaffen ein luftiges, ergonomisches Arbeitskonzept über eine große Grundfläche.',
-        stats: [{ label: 'm² Labor' }, { label: 'Rundungsdesign' }, { label: 'konform' }],
+        description: 'Ikonisches offenes Laboratoriumskonzept für Danone Utrecht. Die gebogenen Werkbänke mit integrierten Servicesäulen sind vollständig maßgeschneidert. Die gebogenen weißen HPL-Platten mit blauen Servicekanälen schaffen ein luftiges, ergonomisches Arbeitskonzept über eine große Grundfläche.',
+        stats: [{ label: 'm² Labor' }, { label: 'Gebogenes Design' }, { label: 'konform' }],
       },
       {
         industry: 'Medizin / Blutforschung',
@@ -450,7 +450,7 @@ const de: T = {
     overline: 'Autorität',
     heading: ['Bewährt in', 'der Praxis.'],
     stats: [
-      { label: 'Jahre Erfahrung', description: 'Spezialist für Labor- und Bildungseinrichtung' },
+      { label: 'Gegründet', description: 'Spezialist für Labor- und Bildungseinrichtung' },
       { label: 'Projekte realisiert', description: 'In ganz Europa' },
       { label: 'Belieferte Länder', description: 'Internationales Netzwerk' },
       { label: 'Kundenzufriedenheit', description: 'Über 5 Jahre gemessen' },
@@ -480,10 +480,10 @@ const de: T = {
     subheading: 'Möchten Sie wissen, was S+B für Ihr Projekt bedeuten kann? Wir denken gerne mit — von der Orientierung bis zur vollständigen Projektdurchführung.',
     emailLabel: 'E-Mail',
     phoneLabel: 'Telefon',
-    cta: 'Angebot anfordern',
+    cta: 'Projektgespräch planen',
   },
   footer: {
-    tagline: '100+ Jahre Spezialist für Laboreinrichtung, Übungsräume und Industriearbeitsplätze. Ansässig in Capelle aan den IJssel, aktiv in ganz Europa.',
+    tagline: '125+ Jahre Spezialist für Laboreinrichtung, Übungsräume und Industriearbeitsplätze. Ansässig in Rotterdam, aktiv in ganz Europa.',
     companyHeading: 'S+B Gruppe',
     divisionsHeading: 'Abteilungen',
     servicesHeading: 'Leistungen',
@@ -501,17 +501,17 @@ const es: T = {
   nav: {
     links: ['Soluciones', 'Proyectos', 'Experiencia', 'Sobre S+B', 'Contacto'],
     cta: 'Planificar una reunión',
-    mobileFooter: '100+ años de experiencia — Países Bajos',
+    mobileFooter: 'Fundada en 1899 — Países Bajos',
   },
   hero: {
-    badge: 'S+B — 100+ Años de Experiencia',
+    badge: 'S+B — Fundada en 1899',
     overline: 'Laboratorios · Aulas prácticas · Industria',
     heading: ['Diseño, producción', 'y realización de', 'laboratorios.'],
     subtitle: 'Especialista en la instalación de laboratorios, aulas prácticas y entornos de trabajo industriales. Producción, instalación y mantenimiento propios — del asesoramiento a la entrega.',
     cta1: 'Ver soluciones',
     cta2: 'Proyectos',
     scroll: 'Scroll',
-    trustSignals: ['100+ años de experiencia', 'Producción e instalación propias', 'Del asesoramiento al mantenimiento'],
+    trustSignals: ['125+ años de experiencia', 'Producción e instalación propias', 'Del asesoramiento al mantenimiento'],
   },
   collection: {
     overline: 'Soluciones',
@@ -560,7 +560,7 @@ const es: T = {
   expertise: {
     overline: 'Conocimiento',
     heading: ['Experiencia &', 'Conocimiento.'],
-    subheading: 'Más de 100 años de experiencia en seis áreas clave que forman la base de cada proyecto S+B. Del conocimiento de materiales a la tecnología del aire — dominamos el campo completo.',
+    subheading: 'Más de 125 años de experiencia en seis áreas clave que forman la base de cada proyecto S+B. Del conocimiento de materiales a la tecnología del aire — dominamos el campo completo.',
     pillars: [
       { label: 'Seguridad & Normas', description: 'Totalmente conforme con regulaciones NEN, ARBO y VPR. Cada diseño pasa por un proceso formal de auditoría de seguridad.' },
       { label: 'Ergonomía', description: 'Regulación de altura, diseños optimizados para la postura y análisis antropométrico para cada puesto de trabajo.' },
@@ -580,7 +580,7 @@ const es: T = {
       { tagline: 'Aulas prácticas y entornos educativos', description: 'Aulas prácticas para MBO, HBO y universidades. S+B Scholen realiza entornos de aprendizaje flexibles y seguros con mobiliario práctico e instalaciones técnicas — duraderos durante décadas.' },
       { tagline: 'Puestos de trabajo industriales y producción a medida', description: 'Estaciones de trabajo industriales pesadas, líneas de montaje y entornos de prueba. Solid Factory ofrece soluciones robustas a medida para la industria manufacturera.' },
       { tagline: 'Soluciones de climatización y vitrinas', description: 'Vitrinas especializadas, ventilación y sistemas de extracción para entornos de laboratorio. Labair diseña, instala e inspecciona sistemas de climatización conforme a NEN-EN 14175 y NPR 4500.' },
-      { tagline: 'El grupo detrás de las marcas', description: 'La organización matriz que integra estrategia, ingeniería, fabricación e instalación bajo un mismo techo. Más de 100 años de experiencia, activa en toda Europa, con instalación de producción propia en Capelle aan den IJssel.' },
+      { tagline: 'El grupo detrás de las marcas', description: 'La organización matriz que integra estrategia, ingeniería, fabricación e instalación bajo un mismo techo. Más de 125 años de experiencia, activa en toda Europa, con instalación de producción propia en Capelle aan den IJssel.' },
     ],
   },
   projects: {
@@ -615,7 +615,7 @@ const es: T = {
     overline: 'Autoridad',
     heading: ['Demostrado en', 'la práctica.'],
     stats: [
-      { label: 'Años de experiencia', description: 'Especialista en instalación de laboratorios y educación' },
+      { label: 'Fundada', description: 'Especialista en instalación de laboratorios y educación' },
       { label: 'Proyectos realizados', description: 'En toda Europa' },
       { label: 'Países suministrados', description: 'Red internacional' },
       { label: 'Satisfacción del cliente', description: 'Medida durante 5 años' },
@@ -645,10 +645,10 @@ const es: T = {
     subheading: '¿Quiere saber qué puede hacer S+B por su proyecto? Estamos encantados de pensar junto a usted — desde la orientación hasta la ejecución completa del proyecto.',
     emailLabel: 'Correo electrónico',
     phoneLabel: 'Teléfono',
-    cta: 'Solicitar presupuesto',
+    cta: 'Planificar una reunión',
   },
   footer: {
-    tagline: '100+ años especialista en instalación de laboratorios, aulas prácticas y espacios de trabajo industriales. Con sede en Capelle aan den IJssel, activo en toda Europa.',
+    tagline: '125+ años especialista en instalación de laboratorios, aulas prácticas y espacios de trabajo industriales. Con sede en Rotterdam, activo en toda Europa.',
     companyHeading: 'S+B Grupo',
     divisionsHeading: 'Divisiones',
     servicesHeading: 'Servicios',
@@ -666,17 +666,17 @@ const it: T = {
   nav: {
     links: ['Soluzioni', 'Progetti', 'Competenza', 'Su S+B', 'Contatto'],
     cta: 'Pianifica una riunione',
-    mobileFooter: '100+ anni di esperienza — Paesi Bassi',
+    mobileFooter: 'Fondata nel 1899 — Paesi Bassi',
   },
   hero: {
-    badge: 'S+B — 100+ Anni di Esperienza',
+    badge: 'S+B — Fondata nel 1899',
     overline: 'Laboratori · Aule pratiche · Industria',
     heading: ['Progettazione, produzione', 'e realizzazione di', 'laboratori.'],
     subtitle: 'Specialista nell\'allestimento di laboratori, aule pratiche e ambienti di lavoro industriali. Produzione, installazione e manutenzione proprie — dalla consulenza alla consegna.',
     cta1: 'Vedi soluzioni',
     cta2: 'Progetti',
     scroll: 'Scorri',
-    trustSignals: ['100+ anni di esperienza', 'Produzione e installazione proprie', 'Dalla consulenza alla manutenzione'],
+    trustSignals: ['125+ anni di esperienza', 'Produzione e installazione proprie', 'Dalla consulenza alla manutenzione'],
   },
   collection: {
     overline: 'Soluzioni',
@@ -725,7 +725,7 @@ const it: T = {
   expertise: {
     overline: 'Competenza',
     heading: ['Esperienza &', 'Competenza.'],
-    subheading: "Oltre 100 anni di esperienza in sei aree chiave che costituiscono la base di ogni progetto S+B. Dalla conoscenza dei materiali alla tecnologia dell'aria — padroneggiamo il campo completo.",
+    subheading: "Oltre 125 anni di esperienza in sei aree chiave che costituiscono la base di ogni progetto S+B. Dalla conoscenza dei materiali alla tecnologia dell'aria — padroneggiamo il campo completo.",
     pillars: [
       { label: 'Sicurezza & Norme', description: 'Completamente conforme alle normative NEN, ARBO e VPR. Ogni progetto attraversa un processo formale di audit della sicurezza.' },
       { label: 'Ergonomia', description: "Regolazione dell'altezza, design ottimizzati per la postura e analisi antropometrica per ogni posto di lavoro." },
@@ -745,7 +745,7 @@ const it: T = {
       { tagline: 'Aule pratiche e ambienti educativi', description: 'Aule pratiche per MBO, HBO e università. S+B Scholen realizza ambienti di apprendimento flessibili e sicuri con mobili pratici e installazioni tecniche — duraturi per decenni.' },
       { tagline: 'Postazioni di lavoro industriali e produzione su misura', description: "Postazioni di lavoro industriali pesanti, linee di assemblaggio e ambienti di test. Solid Factory fornisce soluzioni robuste su misura per l'industria manifatturiera." },
       { tagline: 'Soluzioni di climatizzazione e cappe', description: 'Cappe specializzate, ventilazione e sistemi di aspirazione per ambienti di laboratorio. Labair progetta, installa e ispeziona sistemi di climatizzazione conformi a NEN-EN 14175 e NPR 4500.' },
-      { tagline: 'Il gruppo dietro i marchi', description: "L'organizzazione madre che integra strategia, ingegneria, produzione e installazione sotto un unico tetto. Oltre 100 anni di esperienza, attiva in tutta Europa, con una propria struttura produttiva a Capelle aan den IJssel." },
+      { tagline: 'Il gruppo dietro i marchi', description: "L'organizzazione madre che integra strategia, ingegneria, produzione e installazione sotto un unico tetto. Oltre 125 anni di esperienza, attiva in tutta Europa, con una propria struttura produttiva a Capelle aan den IJssel." },
     ],
   },
   projects: {
@@ -780,7 +780,7 @@ const it: T = {
     overline: 'Autorità',
     heading: ['Dimostrato nella', 'pratica.'],
     stats: [
-      { label: 'Anni di esperienza', description: 'Specialista in allestimento di laboratori e istruzione' },
+      { label: 'Fondata', description: 'Specialista in allestimento di laboratori e istruzione' },
       { label: 'Progetti realizzati', description: 'In tutta Europa' },
       { label: 'Paesi serviti', description: 'Rete internazionale' },
       { label: 'Soddisfazione del cliente', description: 'Misurata su 5 anni' },
@@ -810,10 +810,10 @@ const it: T = {
     subheading: 'Vuoi sapere cosa può fare S+B per il tuo progetto? Siamo felici di ragionare insieme — dall\'orientamento alla piena realizzazione del progetto.',
     emailLabel: 'Email',
     phoneLabel: 'Telefono',
-    cta: 'Richiedi preventivo',
+    cta: 'Pianifica una riunione',
   },
   footer: {
-    tagline: '100+ anni specialista in allestimento di laboratori, aule pratiche e spazi di lavoro industriali. Con sede a Capelle aan den IJssel, attivo in tutta Europa.',
+    tagline: '125+ anni specialista in allestimento di laboratori, aule pratiche e spazi di lavoro industriali. Con sede a Rotterdam, attivo in tutta Europa.',
     companyHeading: 'S+B Gruppo',
     divisionsHeading: 'Divisioni',
     servicesHeading: 'Servizi',

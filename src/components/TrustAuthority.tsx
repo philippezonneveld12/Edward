@@ -7,7 +7,7 @@ import { useTranslation } from '@/i18n/translations'
 const EASE = [0.16, 1, 0.3, 1] as const
 
 const statValues = [
-  { value: 100, suffix: '' },
+  { value: 1899, suffix: '' },
   { value: 2400, suffix: '+' },
   { value: 12, suffix: '' },
   { value: 98, suffix: '%' },

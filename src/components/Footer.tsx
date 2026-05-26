@@ -59,9 +59,10 @@ export default function Footer() {
               <div className="space-y-3">
                 <p className="font-sans font-light text-sb-text-muted text-sm" style={{ lineHeight: '1.7' }}>
                   Schaik & Berghuis Groep B.V.<br />
-                  Postbus 256<br />
-                  2900 AG Capelle aan den IJssel<br />
-                  Nederland
+                  Elandstraat 77<br />
+                  3064 AG Rotterdam<br />
+                  Nederland<br />
+                  <span className="text-sb-text-dim">KVK 24275543</span>
                 </p>
               </div>
             </div>
@@ -120,7 +121,7 @@ export default function Footer() {
                   href="tel:+31102582580"
                   className="block font-sans font-light text-sb-text-muted text-sm hover:text-sb-accent transition-colors duration-300"
                 >
-                  +31 (0)10 258 25 80
+                  +31 10 258 25 80
                 </a>
               </div>
               <a
@@ -170,6 +171,14 @@ export default function Footer() {
               className="font-sans font-light text-sb-text-dim text-xs hover:text-sb-text-muted transition-colors duration-300"
             >
               {t.footer.sitemapLabel}
+            </a>
+            <a
+              href="https://rankbird.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans font-light text-sb-text-dim text-xs hover:text-sb-text-muted transition-colors duration-300"
+            >
+              Powered by Rankbird
             </a>
           </div>
         </div>
