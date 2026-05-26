@@ -126,15 +126,6 @@ function ProjectItem({ index }: ProjectProps) {
           ))}
         </div>
 
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-2 text-sm font-sans font-light text-sb-text-muted hover:text-sb-accent transition-colors duration-300 group"
-        >
-          {t.projects.projectLinkLabel}
-          <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">
-            →
-          </span>
-        </a>
       </div>
     </motion.article>
   )
