@@ -22,7 +22,6 @@ export default function Footer() {
 
   return (
     <footer
-      id="contact"
       aria-label="Footer"
       className="bg-sb-black"
       style={{ borderTop: '1px solid var(--color-border)' }}

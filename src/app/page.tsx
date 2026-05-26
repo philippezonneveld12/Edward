@@ -6,6 +6,7 @@ import ExpertiseSection from '@/components/ExpertiseSection'
 import BusinessUnits from '@/components/BusinessUnits'
 import ProductVisuals from '@/components/ProductVisuals'
 import TrustAuthority from '@/components/TrustAuthority'
+import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <BusinessUnits />
         <ProductVisuals />
         <TrustAuthority />
+        <ContactSection />
       </main>
       <Footer />
     </>

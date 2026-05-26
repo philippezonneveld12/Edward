@@ -20,19 +20,22 @@ function useCountUp(target: number, duration: number = 1800, start: boolean = fa
   useEffect(() => {
     if (!start || started.current) return
     started.current = true
-
     setCount(0)
     let startTime: number | null = null
+    let frameId: number
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp
       const progress = Math.min((timestamp - startTime) / duration, 1)
       const eased = 1 - Math.pow(1 - progress, 3)
       setCount(Math.floor(eased * target))
       if (progress < 1) {
-        requestAnimationFrame(step)
+        frameId = requestAnimationFrame(step)
+      } else {
+        setCount(target)
       }
     }
-    requestAnimationFrame(step)
+    frameId = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(frameId)
   }, [start, target, duration])
 
   return count
@@ -145,10 +148,10 @@ export default function TrustAuthority() {
               {t.trust.certifications.description}
             </p>
             <div className="grid grid-cols-2 gap-2">
-              {['NEN-EN', 'ISO 9001', 'ARBO', 'VPR', 'ATEX', 'CE'].map((cert) => (
+              {['NEN-EN 14175', 'NPR 4500', 'ISO 9001', 'ARBO', 'VPR', 'CE'].map((cert) => (
                 <div
                   key={cert}
-                  className="flex items-center justify-center px-3 py-2.5 border border-sb-border text-sb-text-dim font-sans text-xs tracking-widest uppercase text-center"
+                  className="flex items-center justify-center px-3 py-2.5 border border-sb-border text-sb-text-dim font-sans text-xs tracking-wide uppercase text-center"
                 >
                   {cert}
                 </div>
