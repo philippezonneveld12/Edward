@@ -156,7 +156,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-6 border-t border-sb-border">
           <p className="font-sans font-light text-sb-text-dim text-xs order-2 md:order-1">
-            © {currentYear} Schaik & Berghuis Groep B.V. — {t.footer.copyright}
+            © {currentYear} S+B Groep B.V.
           </p>
 
           <div className="flex items-center gap-6 order-1 md:order-2">
