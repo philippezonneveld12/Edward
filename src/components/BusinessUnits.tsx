@@ -12,9 +12,9 @@ const units = [
     tagline: 'Laboratoriuminterieurs voor onderzoek en industrie',
     description:
       'Van universitaire onderzoekslaboratoria tot industriële QC-labs. S+B Lab ontwerpt en produceert complete laboratoriumomgevingen met bijbehorende installaties, extractie en veiligheidsvoorzieningen.',
-    color: '#141820',
-    gradient: 'linear-gradient(135deg, #141820 0%, #0E1016 100%)',
-    link: '#divisies',
+    color: '#E8ECF4',
+    gradient: 'linear-gradient(135deg, #E4E9F2 0%, #DCE3EE 100%)',
+    link: 'https://www.splusb.nl/lab',
   },
   {
     number: '02',
@@ -22,9 +22,9 @@ const units = [
     tagline: 'Practicumlokalen en onderwijsomgevingen',
     description:
       'Praktijklokalen voor MBO, HBO en universiteiten. S+B Scholen realiseert flexibele, veilige leeromgevingen die voldoen aan de strengste onderwijsnormen en decennialang meegaan.',
-    color: '#1C1810',
-    gradient: 'linear-gradient(135deg, #1C1810 0%, #121008 100%)',
-    link: '#divisies',
+    color: '#F2EBE0',
+    gradient: 'linear-gradient(135deg, #F0E8DB 0%, #E8DDD0 100%)',
+    link: 'https://www.splusb.nl/scholen',
   },
   {
     number: '03',
@@ -32,9 +32,9 @@ const units = [
     tagline: 'Industriële werkplekken en maatwerk productie',
     description:
       'Zware industriële werkstations, assemblagelijnen en testomgevingen. Solid Factory levert robuuste oplossingen voor de maakindustrie, met focus op ergonomie, veiligheid en efficiëntie.',
-    color: '#151618',
-    gradient: 'linear-gradient(135deg, #181A1C 0%, #0E1012 100%)',
-    link: '#divisies',
+    color: '#E5E8EC',
+    gradient: 'linear-gradient(135deg, #E2E5EA 0%, #DADDE4 100%)',
+    link: 'https://www.splusb.nl/solid-factory',
   },
   {
     number: '04',
@@ -42,9 +42,9 @@ const units = [
     tagline: 'Luchttechnische oplossingen en ventilatie',
     description:
       'Specialistische ventilatie- en extractiesystemen voor laboratoriumomgevingen. Labair ontwerpt en installeert luchttechnische systemen conform de hoogste veiligheidsnormen.',
-    color: '#141C1C',
-    gradient: 'linear-gradient(135deg, #141C1C 0%, #0C1414 100%)',
-    link: '#divisies',
+    color: '#E2ECED',
+    gradient: 'linear-gradient(135deg, #DEE9EA 0%, #D4E2E4 100%)',
+    link: 'https://www.splusb.nl/labair',
   },
   {
     number: '05',
@@ -52,9 +52,9 @@ const units = [
     tagline: 'De groep achter de merken',
     description:
       'De moederorganisatie die strategie, engineering, fabricage en installatie integreert onder één dak. Opgericht in 1987, actief in 12 landen, met een eigen productiefaciliteit in Nederland.',
-    color: '#181614',
-    gradient: 'linear-gradient(135deg, #181614 0%, #100E0C 100%)',
-    link: '#contact',
+    color: '#EDE9E3',
+    gradient: 'linear-gradient(135deg, #EAE6E0 0%, #E2DED8 100%)',
+    link: 'https://www.splusb.nl',
   },
 ]
 
@@ -158,6 +158,8 @@ export default function BusinessUnits() {
                 {/* Right: link */}
                 <a
                   href={unit.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sb-text-muted hover:text-sb-accent text-sm font-sans font-light tracking-wide transition-colors duration-300 group shrink-0 ml-4"
                   onClick={(e) => e.stopPropagation()}
                 >

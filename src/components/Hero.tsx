@@ -85,8 +85,8 @@ export default function Hero() {
         transition={{ delay: 0.6, duration: 1.2 }}
       >
         <span
-          className="text-sb-text-dim font-sans"
-          style={{ fontSize: '0.625rem', letterSpacing: '0.25em', textTransform: 'uppercase' }}
+          className="font-sans"
+          style={{ fontSize: '0.625rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}
         >
           S+B — 100 Jaar Marktleider
         </span>
@@ -102,14 +102,15 @@ export default function Hero() {
             animate="visible"
           >
             {/* Overline */}
-            <motion.p variants={itemVariants} className="overline mb-6">
+            <motion.p variants={itemVariants} className="overline mb-6" style={{ color: '#C4B49A' }}>
               Laboratorium&nbsp;·&nbsp;Onderwijs&nbsp;·&nbsp;Industrie
             </motion.p>
 
             {/* Main headline */}
             <motion.h1
               variants={itemVariants}
-              className="font-serif text-display-xl text-sb-text mb-6 leading-none"
+              className="font-serif text-display-xl mb-6 leading-none"
+              style={{ color: '#F4F1EC' }}
             >
               Gebouwd voor
               <br />
@@ -121,8 +122,8 @@ export default function Hero() {
             {/* Subheadline */}
             <motion.p
               variants={itemVariants}
-              className="font-sans font-light text-sb-text-muted text-lg md:text-xl max-w-xl mb-10"
-              style={{ lineHeight: '1.6' }}
+              className="font-sans font-light text-lg md:text-xl max-w-xl mb-10"
+              style={{ lineHeight: '1.6', color: 'rgba(244,241,236,0.65)' }}
             >
               Custom engineered environments designed for performance, safety and longevity.
             </motion.p>
@@ -134,13 +135,19 @@ export default function Hero() {
             >
               <a
                 href="#collectie"
-                className="inline-flex items-center gap-3 px-7 py-3.5 border border-sb-text/30 text-sb-text text-sm font-sans font-light tracking-wide hover:border-sb-accent hover:text-sb-accent transition-all duration-500"
+                className="inline-flex items-center gap-3 px-7 py-3.5 text-sm font-sans font-light tracking-wide transition-all duration-500"
+                style={{ border: '1px solid rgba(244,241,236,0.3)', color: '#F4F1EC' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#9A8A6C'; (e.currentTarget as HTMLElement).style.color = '#C4B49A' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(244,241,236,0.3)'; (e.currentTarget as HTMLElement).style.color = '#F4F1EC' }}
               >
                 Bekijk collectie
               </a>
               <a
                 href="#projecten"
-                className="inline-flex items-center gap-3 py-3.5 text-sb-text-muted text-sm font-sans font-light tracking-wide hover:text-sb-accent transition-colors duration-500 group"
+                className="inline-flex items-center gap-3 py-3.5 text-sm font-sans font-light tracking-wide transition-colors duration-500 group"
+                style={{ color: 'rgba(244,241,236,0.6)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#C4B49A' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(244,241,236,0.6)' }}
               >
                 Projecten
                 <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
@@ -161,14 +168,14 @@ export default function Hero() {
         ref={scrollRef}
       >
         <span
-          className="font-sans text-sb-text-dim"
-          style={{ fontSize: '0.625rem', letterSpacing: '0.2em', textTransform: 'uppercase', writingMode: 'vertical-lr' }}
+          className="font-sans"
+          style={{ fontSize: '0.625rem', letterSpacing: '0.2em', textTransform: 'uppercase', writingMode: 'vertical-lr', color: 'rgba(255,255,255,0.35)' }}
         >
           Scroll
         </span>
         <motion.div
-          className="w-px bg-sb-text-dim origin-top"
-          style={{ height: '48px' }}
+          className="w-px origin-top"
+          style={{ height: '48px', background: 'rgba(255,255,255,0.25)' }}
           animate={{ scaleY: [0, 1, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut', repeatDelay: 0.4 }}
         />

@@ -57,7 +57,7 @@ export default function Navigation() {
         <motion.div
           className="relative px-6 md:px-10 lg:px-16"
           animate={{
-            backgroundColor: scrolled ? 'rgba(11, 11, 9, 0.95)' : 'rgba(11, 11, 9, 0)',
+            backgroundColor: scrolled ? 'rgba(246, 244, 239, 0.97)' : 'rgba(246, 244, 239, 0)',
             backdropFilter: scrolled ? 'blur(20px)' : 'blur(0px)',
           }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
@@ -66,10 +66,10 @@ export default function Navigation() {
             {/* Logo */}
             <a
               href="/"
-              className="font-serif text-2xl font-light tracking-tight text-sb-text hover:text-sb-accent"
-              style={{ letterSpacing: '-0.02em' }}
+              className="font-serif text-2xl font-light tracking-tight transition-colors duration-300"
+              style={{ letterSpacing: '-0.02em', color: scrolled ? '#1C1A17' : '#F4F1EC' }}
             >
-              S<span className="text-sb-accent">+</span>B
+              S<span style={{ color: '#9A8A6C' }}>+</span>B
             </a>
 
             {/* Desktop nav links */}
@@ -82,7 +82,10 @@ export default function Navigation() {
                     e.preventDefault()
                     handleNavClick(link.href)
                   }}
-                  className="text-[13px] font-sans font-[400] text-sb-text-muted hover:text-sb-text tracking-wide transition-colors duration-300"
+                  className="text-[13px] font-sans font-[400] tracking-wide transition-colors duration-300"
+                  style={{ color: scrolled ? '#5A5855' : 'rgba(244,241,236,0.7)' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = scrolled ? '#1C1A17' : '#F4F1EC' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = scrolled ? '#5A5855' : 'rgba(244,241,236,0.7)' }}
                 >
                   {link.label}
                 </a>
@@ -97,7 +100,19 @@ export default function Navigation() {
                   e.preventDefault()
                   handleNavClick('#contact')
                 }}
-                className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 border border-sb-accent/40 text-sb-accent text-[12px] font-sans font-[500] tracking-widest uppercase hover:border-sb-accent hover:bg-sb-accent/10 transition-all duration-300"
+                className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 border text-[12px] font-sans font-[500] tracking-widest uppercase transition-all duration-300"
+                style={{
+                  borderColor: scrolled ? 'rgba(154,138,108,0.4)' : 'rgba(244,241,236,0.35)',
+                  color: scrolled ? '#9A8A6C' : '#F4F1EC',
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = '#9A8A6C'
+                  ;(e.currentTarget as HTMLElement).style.backgroundColor = scrolled ? 'rgba(154,138,108,0.08)' : 'rgba(255,255,255,0.1)'
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = scrolled ? 'rgba(154,138,108,0.4)' : 'rgba(244,241,236,0.35)'
+                  ;(e.currentTarget as HTMLElement).style.backgroundColor = 'transparent'
+                }}
               >
                 Offerte aanvragen
               </a>
@@ -109,12 +124,14 @@ export default function Navigation() {
                 aria-label="Menu openen"
               >
                 <motion.span
-                  className="block w-6 h-px bg-sb-text origin-center"
+                  className="block w-6 h-px origin-center"
+                  style={{ backgroundColor: scrolled ? '#1C1A17' : '#F4F1EC' }}
                   animate={mobileOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
                   transition={{ duration: 0.3, ease: PREMIUM_EASE }}
                 />
                 <motion.span
-                  className="block w-6 h-px bg-sb-text origin-center"
+                  className="block w-6 h-px origin-center"
+                  style={{ backgroundColor: scrolled ? '#1C1A17' : '#F4F1EC' }}
                   animate={mobileOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
                   transition={{ duration: 0.3, ease: PREMIUM_EASE }}
                 />
@@ -135,7 +152,8 @@ export default function Navigation() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-sb-black flex flex-col"
+            className="fixed inset-0 z-40 flex flex-col"
+            style={{ backgroundColor: '#1A1816' }}
             initial={{ opacity: 0, y: '-100%' }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '-100%' }}
@@ -154,7 +172,10 @@ export default function Navigation() {
                       e.preventDefault()
                       handleNavClick(link.href)
                     }}
-                    className="font-serif text-[clamp(2.5rem,8vw,4rem)] font-light text-sb-text hover:text-sb-accent transition-colors duration-300 py-2 border-b border-sb-border/30"
+                    className="font-serif text-[clamp(2.5rem,8vw,4rem)] font-light py-2 transition-colors duration-300"
+                    style={{ color: '#F4F1EC', borderBottom: '1px solid rgba(255,255,255,0.1)' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#B8A98C' }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#F4F1EC' }}
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.07, duration: 0.5, ease: PREMIUM_EASE }}
@@ -176,14 +197,17 @@ export default function Navigation() {
                     e.preventDefault()
                     handleNavClick('#contact')
                   }}
-                  className="inline-flex items-center gap-3 px-8 py-4 border border-sb-accent/50 text-sb-accent text-[13px] font-sans font-[500] tracking-widest uppercase hover:bg-sb-accent/10 transition-all duration-300"
+                  className="inline-flex items-center gap-3 px-8 py-4 text-[13px] font-sans font-[500] tracking-widest uppercase transition-all duration-300"
+                  style={{ border: '1px solid rgba(184,169,140,0.5)', color: '#B8A98C' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(184,169,140,0.1)' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = 'transparent' }}
                 >
                   Offerte aanvragen
                 </a>
               </motion.div>
             </div>
 
-            <div className="px-8 pb-12 text-sb-text-dim text-[12px] font-sans">
+            <div className="px-8 pb-12 text-[12px] font-sans" style={{ color: 'rgba(255,255,255,0.3)' }}>
               <p>Est. 1987 — Nederland</p>
             </div>
           </motion.div>

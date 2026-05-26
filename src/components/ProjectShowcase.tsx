@@ -112,7 +112,7 @@ function ProjectItem({ project, index }: ProjectProps) {
         />
         {/* Subtle dark overlay */}
         <div
-          className="absolute inset-0 bg-sb-black/30 pointer-events-none"
+          className="absolute inset-0 bg-black/30 pointer-events-none"
           aria-hidden="true"
         />
 

@@ -81,7 +81,7 @@ function ProductSection({ product, index }: ProductSectionProps) {
       />
       {/* Dark overlay for text legibility */}
       <div
-        className="absolute inset-0 bg-sb-black/50 pointer-events-none"
+        className="absolute inset-0 bg-black/50 pointer-events-none"
         aria-hidden="true"
       />
 

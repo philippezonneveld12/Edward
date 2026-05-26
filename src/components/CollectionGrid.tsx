@@ -104,7 +104,7 @@ function CollectionCard({ category, index, gridStyle }: CardProps) {
 
       {/* Hover overlay */}
       <div
-        className="absolute inset-0 bg-sb-black/0 group-hover:bg-sb-black/20 transition-all duration-500"
+        className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"
         aria-hidden="true"
       />
 
@@ -124,8 +124,8 @@ function CollectionCard({ category, index, gridStyle }: CardProps) {
       >
         {/* Top: number */}
         <span
-          className="font-sans text-sb-text-dim block"
-          style={{ fontSize: '0.625rem', letterSpacing: '0.2em' }}
+          className="font-sans block"
+          style={{ fontSize: '0.625rem', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.4)' }}
         >
           {category.number}
         </span>
@@ -133,15 +133,15 @@ function CollectionCard({ category, index, gridStyle }: CardProps) {
         {/* Bottom: name, description, arrow */}
         <div>
           <h3
-            className="font-serif text-sb-text font-light mb-2"
-            style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2.2rem)', lineHeight: '1.1' }}
+            className="font-serif font-light mb-2"
+            style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2.2rem)', lineHeight: '1.1', color: '#F4F1EC' }}
           >
             {category.name}
           </h3>
-          <p className="font-sans font-light text-sb-text-muted text-sm mb-4" style={{ lineHeight: '1.6' }}>
+          <p className="font-sans font-light text-sm mb-4" style={{ lineHeight: '1.6', color: 'rgba(244,241,236,0.65)' }}>
             {category.description}
           </p>
-          <div className="flex items-center gap-2 text-sb-accent text-sm font-sans font-light">
+          <div className="flex items-center gap-2 text-sm font-sans font-light" style={{ color: '#C4B49A' }}>
             <span>Bekijk</span>
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
           </div>

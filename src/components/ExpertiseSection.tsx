@@ -70,7 +70,7 @@ export default function ExpertiseSection() {
             return (
               <motion.div
                 key={pillar.label}
-                className="relative bg-sb-surface p-8 group hover:bg-[#1A1A17] transition-colors duration-500 cursor-default"
+                className="relative bg-sb-surface p-8 group hover:bg-[#E2E0DA] transition-colors duration-500 cursor-default"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
