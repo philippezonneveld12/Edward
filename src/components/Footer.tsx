@@ -7,14 +7,21 @@ import { useTranslation } from '@/i18n/translations'
 const EASE = [0.16, 1, 0.3, 1] as const
 
 const divisions = [
-  { name: 'S+B Lab', href: '#divisies' },
-  { name: 'S+B Scholen', href: '#divisies' },
-  { name: 'Solid Factory', href: '#divisies' },
-  { name: 'Labair', href: '#divisies' },
-  { name: 'Schaik & Berghuis', href: '#divisies' },
+  { name: 'S+B Lab', href: 'https://www.splusb.nl/lab' },
+  { name: 'S+B Scholen', href: 'https://www.splusb.nl/scholen' },
+  { name: 'Solid Factory', href: 'https://www.splusb.nl/solid-factory' },
+  { name: 'Labair', href: 'https://www.splusb.nl/labair' },
+  { name: 'Schaik & Berghuis', href: 'https://www.splusb.nl' },
 ]
 
-const serviceHrefs = ['#collectie', '#collectie', '#collectie', '#collectie', '#collectie', '#collectie']
+const serviceHrefs = [
+  'https://www.splusb.nl/labair',        // Zuurkasten & afzuiging
+  'https://www.splusb.nl/lab',           // Laboratoriumwerkbanken
+  'https://www.splusb.nl/scholen',       // Practicumlokalen
+  'https://www.splusb.nl/lab',           // Cleanrooms
+  'https://www.splusb.nl/labair',        // Onderhoud & inspectie
+  'https://www.splusb.nl/solid-factory', // Maatwerk interieurs
+]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -77,6 +84,8 @@ export default function Footer() {
                   <li key={item.name}>
                     <a
                       href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="font-sans font-light text-sb-text-muted text-sm hover:text-sb-text transition-colors duration-300"
                     >
                       {item.name}
@@ -96,6 +105,8 @@ export default function Footer() {
                   <li key={i}>
                     <a
                       href={serviceHrefs[i]}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="font-sans font-light text-sb-text-muted text-sm hover:text-sb-text transition-colors duration-300"
                     >
                       {name}
