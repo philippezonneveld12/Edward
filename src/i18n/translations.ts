@@ -3,7 +3,7 @@ import { useTheme } from '@/contexts/ThemeContext'
 const nl = {
   nav: {
     links: ['Collectie', 'Projecten', 'Expertise', 'Divisies', 'Contact'],
-    cta: 'Offerte aanvragen',
+    cta: 'Plan een projectgesprek',
     mobileFooter: 'Est. 1987 — Nederland',
   },
   hero: {
@@ -148,7 +148,7 @@ const nl = {
     servicesHeading: 'Diensten',
     contactHeading: 'Contact',
     followHeading: 'Volg ons',
-    cta: 'Offerte aanvragen',
+    cta: 'Plan een projectgesprek',
     privacyLabel: 'Privacy',
     sitemapLabel: 'Sitemap',
     copyright: 'Alle rechten voorbehouden.',
@@ -161,7 +161,7 @@ type T = typeof nl
 const en: T = {
   nav: {
     links: ['Collection', 'Projects', 'Expertise', 'Divisions', 'Contact'],
-    cta: 'Request quote',
+    cta: 'Schedule a project call',
     mobileFooter: 'Est. 1987 — Netherlands',
   },
   hero: {
@@ -306,7 +306,7 @@ const en: T = {
     servicesHeading: 'Services',
     contactHeading: 'Contact',
     followHeading: 'Follow us',
-    cta: 'Request quote',
+    cta: 'Schedule a project call',
     privacyLabel: 'Privacy',
     sitemapLabel: 'Sitemap',
     copyright: 'All rights reserved.',
@@ -317,7 +317,7 @@ const en: T = {
 const de: T = {
   nav: {
     links: ['Kollektion', 'Projekte', 'Expertise', 'Abteilungen', 'Kontakt'],
-    cta: 'Angebot anfordern',
+    cta: 'Projektgespräch planen',
     mobileFooter: 'Gegr. 1987 — Niederlande',
   },
   hero: {
@@ -462,7 +462,7 @@ const de: T = {
     servicesHeading: 'Leistungen',
     contactHeading: 'Kontakt',
     followHeading: 'Folgen Sie uns',
-    cta: 'Angebot anfordern',
+    cta: 'Projektgespräch planen',
     privacyLabel: 'Datenschutz',
     sitemapLabel: 'Sitemap',
     copyright: 'Alle Rechte vorbehalten.',
@@ -473,7 +473,7 @@ const de: T = {
 const es: T = {
   nav: {
     links: ['Colección', 'Proyectos', 'Experiencia', 'Divisiones', 'Contacto'],
-    cta: 'Solicitar presupuesto',
+    cta: 'Planificar una reunión',
     mobileFooter: 'Fund. 1987 — Países Bajos',
   },
   hero: {
@@ -618,7 +618,7 @@ const es: T = {
     servicesHeading: 'Servicios',
     contactHeading: 'Contacto',
     followHeading: 'Síguenos',
-    cta: 'Solicitar presupuesto',
+    cta: 'Planificar una reunión',
     privacyLabel: 'Privacidad',
     sitemapLabel: 'Mapa del sitio',
     copyright: 'Todos los derechos reservados.',
@@ -629,7 +629,7 @@ const es: T = {
 const it: T = {
   nav: {
     links: ['Collezione', 'Progetti', 'Competenza', 'Divisioni', 'Contatto'],
-    cta: 'Richiedi preventivo',
+    cta: 'Pianifica una riunione',
     mobileFooter: 'Fond. 1987 — Paesi Bassi',
   },
   hero: {
@@ -774,7 +774,7 @@ const it: T = {
     servicesHeading: 'Servizi',
     contactHeading: 'Contatto',
     followHeading: 'Seguici',
-    cta: 'Richiedi preventivo',
+    cta: 'Pianifica una riunione',
     privacyLabel: 'Privacy',
     sitemapLabel: 'Mappa del sito',
     copyright: 'Tutti i diritti riservati.',
