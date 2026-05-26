@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -12,8 +13,8 @@ const units = [
     tagline: 'Laboratoriuminterieurs voor onderzoek en industrie',
     description:
       'Van universitaire onderzoekslaboratoria tot industriële QC-labs. S+B Lab ontwerpt en produceert complete laboratoriumomgevingen met bijbehorende installaties, extractie en veiligheidsvoorzieningen.',
-    color: '#E8ECF4',
-    gradient: 'linear-gradient(135deg, #E4E9F2 0%, #DCE3EE 100%)',
+    lightGradient: 'linear-gradient(135deg, #E4E9F2 0%, #DCE3EE 100%)',
+    darkGradient:  'linear-gradient(135deg, #141820 0%, #0E1016 100%)',
     link: 'https://www.splusb.nl/lab',
   },
   {
@@ -22,8 +23,8 @@ const units = [
     tagline: 'Practicumlokalen en onderwijsomgevingen',
     description:
       'Praktijklokalen voor MBO, HBO en universiteiten. S+B Scholen realiseert flexibele, veilige leeromgevingen die voldoen aan de strengste onderwijsnormen en decennialang meegaan.',
-    color: '#F2EBE0',
-    gradient: 'linear-gradient(135deg, #F0E8DB 0%, #E8DDD0 100%)',
+    lightGradient: 'linear-gradient(135deg, #F0E8DB 0%, #E8DDD0 100%)',
+    darkGradient:  'linear-gradient(135deg, #1C1810 0%, #121008 100%)',
     link: 'https://www.splusb.nl/scholen',
   },
   {
@@ -32,8 +33,8 @@ const units = [
     tagline: 'Industriële werkplekken en maatwerk productie',
     description:
       'Zware industriële werkstations, assemblagelijnen en testomgevingen. Solid Factory levert robuuste oplossingen voor de maakindustrie, met focus op ergonomie, veiligheid en efficiëntie.',
-    color: '#E5E8EC',
-    gradient: 'linear-gradient(135deg, #E2E5EA 0%, #DADDE4 100%)',
+    lightGradient: 'linear-gradient(135deg, #E2E5EA 0%, #DADDE4 100%)',
+    darkGradient:  'linear-gradient(135deg, #181A1C 0%, #0E1012 100%)',
     link: 'https://www.splusb.nl/solid-factory',
   },
   {
@@ -42,8 +43,8 @@ const units = [
     tagline: 'Luchttechnische oplossingen en ventilatie',
     description:
       'Specialistische ventilatie- en extractiesystemen voor laboratoriumomgevingen. Labair ontwerpt en installeert luchttechnische systemen conform de hoogste veiligheidsnormen.',
-    color: '#E2ECED',
-    gradient: 'linear-gradient(135deg, #DEE9EA 0%, #D4E2E4 100%)',
+    lightGradient: 'linear-gradient(135deg, #DEE9EA 0%, #D4E2E4 100%)',
+    darkGradient:  'linear-gradient(135deg, #141C1C 0%, #0C1414 100%)',
     link: 'https://www.splusb.nl/labair',
   },
   {
@@ -52,14 +53,16 @@ const units = [
     tagline: 'De groep achter de merken',
     description:
       'De moederorganisatie die strategie, engineering, fabricage en installatie integreert onder één dak. Opgericht in 1987, actief in 12 landen, met een eigen productiefaciliteit in Nederland.',
-    color: '#EDE9E3',
-    gradient: 'linear-gradient(135deg, #EAE6E0 0%, #E2DED8 100%)',
+    lightGradient: 'linear-gradient(135deg, #EAE6E0 0%, #E2DED8 100%)',
+    darkGradient:  'linear-gradient(135deg, #181614 0%, #100E0C 100%)',
     link: 'https://www.splusb.nl',
   },
 ]
 
 export default function BusinessUnits() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const { theme } = useTheme()
+  const isDark = theme === 'dark'
 
   return (
     <section id="divisies" aria-label="Onze Divisies" className="section-padding bg-sb-black">
@@ -97,7 +100,7 @@ export default function BusinessUnits() {
             {/* Background layer */}
             <motion.div
               className="absolute inset-0"
-              style={{ background: unit.gradient }}
+              style={{ background: isDark ? unit.darkGradient : unit.lightGradient }}
               animate={{
                 opacity: hoveredIndex === i ? 1 : 0,
               }}

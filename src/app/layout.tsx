@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '@/contexts/ThemeContext'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -128,17 +129,25 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="nl" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="nl" className={`${cormorant.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
+        {/* Anti-flash: apply stored theme before React hydrates */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('sb-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <meta name="theme-color" content="#0B0B09" />
+        <meta name="theme-color" content="#F6F4EF" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="bg-sb-black text-sb-text antialiased">
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

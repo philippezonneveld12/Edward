@@ -132,7 +132,7 @@ export default function Footer() {
               </div>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-sb-accent/40 text-sb-accent text-xs font-sans font-light tracking-widest uppercase hover:border-sb-accent hover:bg-sb-accent/10 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-sb-border text-sb-accent text-xs font-sans font-light tracking-widest uppercase hover:border-sb-accent transition-all duration-300"
               >
                 Offerte aanvragen
               </a>
