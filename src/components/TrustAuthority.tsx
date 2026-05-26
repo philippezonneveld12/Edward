@@ -14,11 +14,14 @@ const statValues = [
 ]
 
 function useCountUp(target: number, duration: number = 1800, start: boolean = false) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(target)
+  const started = useRef(false)
 
   useEffect(() => {
-    if (!start) return
+    if (!start || started.current) return
+    started.current = true
 
+    setCount(0)
     let startTime: number | null = null
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp
@@ -55,7 +58,7 @@ function StatCard({ value, suffix, label, description, index, inView }: StatCard
       transition={{ duration: 0.7, delay: index * 0.1, ease: EASE }}
     >
       <div className="font-serif text-sb-text font-light mb-2" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', lineHeight: '1', letterSpacing: '-0.02em' }}>
-        <span>{inView ? count : 0}</span>
+        <span>{count}</span>
         <span className="text-sb-accent">{suffix}</span>
       </div>
       <p className="font-sans font-medium text-sb-text text-base mb-1">{label}</p>
