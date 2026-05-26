@@ -109,85 +109,83 @@ export default function Navigation() {
               ))}
             </nav>
 
-            {/* Right controls */}
-            <div className="flex items-center gap-2">
+            {/* Right controls — desktop: [NL▾] [☾] | Offerte aanvragen */}
+            <div className="flex items-center">
 
-              {/* Language picker — desktop */}
-              <div ref={langRef} className="hidden lg:block relative">
-                <button
-                  onClick={() => setLangOpen(v => !v)}
-                  className="flex items-center gap-1 px-3 py-1.5 font-sans text-[11px] font-[500] tracking-widest uppercase transition-all duration-300 rounded-none"
-                  style={{
-                    color: iconCol,
-                    border: `1px solid ${iconBorder}`,
-                  }}
-                  aria-label="Taal kiezen"
-                >
-                  {mounted ? currentLang.short : 'NL'}
-                  <ChevronDown
-                    size={10}
-                    className="transition-transform duration-200"
-                    style={{ transform: langOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
-                  />
-                </button>
+              {/* ── Language + Theme group ── */}
+              <div className="hidden lg:flex items-center gap-1 mr-3">
 
-                <AnimatePresence>
-                  {langOpen && (
-                    <motion.div
-                      className="absolute right-0 top-full mt-2 min-w-[140px] py-1 shadow-lg z-50"
-                      style={{
-                        background: isDark ? '#161614' : '#F6F4EF',
-                        border: `1px solid var(--color-border)`,
-                      }}
-                      initial={{ opacity: 0, y: -6 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -6 }}
-                      transition={{ duration: 0.15 }}
-                    >
-                      {LANGUAGES.map(lang => (
-                        <button
-                          key={lang.code}
-                          onClick={() => { setLanguage(lang.code); setLangOpen(false) }}
-                          className="w-full text-left px-4 py-2.5 font-sans text-[12px] tracking-wide transition-colors duration-150 flex items-center justify-between"
-                          style={{
-                            color: language === lang.code ? 'var(--color-accent)' : 'var(--color-text-muted)',
-                            backgroundColor: language === lang.code
-                              ? (isDark ? 'rgba(184,169,140,0.08)' : 'rgba(154,138,108,0.06)')
-                              : 'transparent',
-                          }}
-                          onMouseEnter={e => { if (language !== lang.code) (e.currentTarget as HTMLElement).style.color = 'var(--color-text)' }}
-                          onMouseLeave={e => { if (language !== lang.code) (e.currentTarget as HTMLElement).style.color = 'var(--color-text-muted)' }}
-                        >
-                          <span>{lang.label}</span>
-                          <span className="text-[10px] tracking-widest opacity-60">{lang.short}</span>
-                        </button>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                {/* Language picker */}
+                <div ref={langRef} className="relative">
+                  <button
+                    onClick={() => setLangOpen(v => !v)}
+                    className="flex items-center gap-1 h-8 px-3 font-sans text-[11px] font-[500] tracking-widest uppercase transition-colors duration-300"
+                    style={{ color: iconCol, border: `1px solid ${iconBorder}` }}
+                    aria-label="Taal kiezen"
+                  >
+                    {mounted ? currentLang.short : 'NL'}
+                    <ChevronDown
+                      size={10}
+                      className="transition-transform duration-200"
+                      style={{ transform: langOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                    />
+                  </button>
 
-              {/* Theme toggle — desktop */}
-              {mounted && (
+                  <AnimatePresence>
+                    {langOpen && (
+                      <motion.div
+                        className="absolute right-0 top-full mt-2 min-w-[148px] py-1 shadow-lg z-50"
+                        style={{ background: isDark ? '#161614' : '#F6F4EF', border: `1px solid var(--color-border)` }}
+                        initial={{ opacity: 0, y: -6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -6 }}
+                        transition={{ duration: 0.15 }}
+                      >
+                        {LANGUAGES.map(lang => (
+                          <button
+                            key={lang.code}
+                            onClick={() => { setLanguage(lang.code); setLangOpen(false) }}
+                            className="w-full text-left px-4 py-2.5 font-sans text-[12px] tracking-wide transition-colors duration-150 flex items-center justify-between"
+                            style={{
+                              color: language === lang.code ? 'var(--color-accent)' : 'var(--color-text-muted)',
+                              backgroundColor: language === lang.code
+                                ? (isDark ? 'rgba(184,169,140,0.08)' : 'rgba(154,138,108,0.06)')
+                                : 'transparent',
+                            }}
+                            onMouseEnter={e => { if (language !== lang.code) (e.currentTarget as HTMLElement).style.color = 'var(--color-text)' }}
+                            onMouseLeave={e => { if (language !== lang.code) (e.currentTarget as HTMLElement).style.color = 'var(--color-text-muted)' }}
+                          >
+                            <span>{lang.label}</span>
+                            <span className="text-[10px] tracking-widest opacity-50">{lang.short}</span>
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Theme toggle */}
                 <button
                   onClick={toggleTheme}
-                  className="hidden lg:flex items-center justify-center w-8 h-8 transition-all duration-300"
+                  className="flex items-center justify-center w-8 h-8 transition-colors duration-300"
                   style={{ color: iconCol, border: `1px solid ${iconBorder}` }}
                   aria-label={isDark ? 'Schakel naar licht thema' : 'Schakel naar donker thema'}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-accent)' }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = iconCol }}
                 >
-                  {isDark ? <Sun size={13} strokeWidth={1.5} /> : <Moon size={13} strokeWidth={1.5} />}
+                  {mounted
+                    ? (isDark ? <Sun size={13} strokeWidth={1.5} /> : <Moon size={13} strokeWidth={1.5} />)
+                    : <Moon size={13} strokeWidth={1.5} />
+                  }
                 </button>
-              )}
+              </div>
 
               {/* CTA button — desktop */}
               <a
                 href="#contact"
                 onClick={e => { e.preventDefault(); handleNavClick('#contact') }}
-                className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-[12px] font-sans font-[500] tracking-widest uppercase transition-all duration-300 ml-2"
+                className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-[12px] font-sans font-[500] tracking-widest uppercase transition-all duration-300"
                 style={{
-                  borderColor: textOnDark ? 'rgba(244,241,236,0.35)' : 'rgba(154,138,108,0.4)',
                   border: `1px solid ${textOnDark ? 'rgba(244,241,236,0.35)' : 'rgba(154,138,108,0.4)'}`,
                   color: textOnDark ? '#F4F1EC' : 'var(--color-accent)',
                 }}
@@ -206,13 +204,13 @@ export default function Navigation() {
               </a>
 
               {/* Mobile: lang + theme + hamburger */}
-              <div className="lg:hidden flex items-center gap-2">
+              <div className="lg:hidden flex items-center gap-1.5">
 
                 {/* Language button mobile */}
-                <div ref={undefined} className="relative">
+                <div ref={langRef} className="relative">
                   <button
                     onClick={() => setLangOpen(v => !v)}
-                    className="flex items-center gap-1 px-2.5 py-1.5 font-sans text-[11px] font-[500] tracking-widest uppercase"
+                    className="flex items-center gap-1 h-8 px-2.5 font-sans text-[11px] font-[500] tracking-widest uppercase"
                     style={{ color: iconCol, border: `1px solid ${iconBorder}` }}
                     aria-label="Taal kiezen"
                   >
@@ -222,7 +220,7 @@ export default function Navigation() {
                   <AnimatePresence>
                     {langOpen && (
                       <motion.div
-                        className="absolute right-0 top-full mt-2 min-w-[140px] py-1 shadow-lg z-50"
+                        className="absolute right-0 top-full mt-2 min-w-[148px] py-1 shadow-lg z-50"
                         style={{ background: isDark ? '#161614' : '#F6F4EF', border: `1px solid var(--color-border)` }}
                         initial={{ opacity: 0, y: -6 }}
                         animate={{ opacity: 1, y: 0 }}
