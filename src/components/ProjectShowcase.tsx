@@ -119,7 +119,7 @@ function ProjectItem({ project, index }: ProjectProps) {
         {/* Location badge */}
         <div className="absolute top-6 left-6 z-10">
           <span
-            className="inline-block px-3 py-1.5 border border-sb-border bg-sb-black/60 font-sans text-sb-text-muted backdrop-blur-sm"
+            className="inline-block px-3 py-1.5 border border-sb-border bg-black/55 font-sans text-sb-text-muted backdrop-blur-sm"
             style={{ fontSize: '0.6875rem', letterSpacing: '0.15em' }}
           >
             {project.location}

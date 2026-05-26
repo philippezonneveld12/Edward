@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'sb-black': '#F6F4EF',
-        'sb-surface': '#EDEBE6',
-        'sb-surface-2': '#E4E2DC',
-        'sb-accent': '#9A8A6C',
-        'sb-accent-light': '#B8A98C',
-        'sb-text': '#1C1A17',
-        'sb-text-muted': '#5A5855',
-        'sb-text-dim': '#908D89',
-        'sb-border': '#D4D1CA',
-        'sb-border-light': '#C0BDB6',
+        'sb-black':        'var(--color-black)',
+        'sb-surface':      'var(--color-surface)',
+        'sb-surface-2':    'var(--color-surface-2)',
+        'sb-accent':       'var(--color-accent)',
+        'sb-accent-light': 'var(--color-accent-light)',
+        'sb-text':         'var(--color-text)',
+        'sb-text-muted':   'var(--color-text-muted)',
+        'sb-text-dim':     'var(--color-text-dim)',
+        'sb-border':       'var(--color-border)',
+        'sb-border-light': 'var(--color-border-light)',
       },
       fontFamily: {
         serif: ['var(--font-cormorant)', 'Georgia', 'serif'],
