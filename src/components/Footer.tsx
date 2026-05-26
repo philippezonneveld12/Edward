@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Linkedin, Instagram, ArrowUpRight } from 'lucide-react'
+import { Linkedin, ArrowUpRight } from 'lucide-react'
 import { useTranslation } from '@/i18n/translations'
 
 const EASE = [0.16, 1, 0.3, 1] as const
@@ -146,16 +146,6 @@ export default function Footer() {
                 >
                   <Linkedin size={16} strokeWidth={1.5} />
                   LinkedIn
-                  <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </a>
-                <a
-                  href="https://www.instagram.com/splusb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 text-sb-text-muted text-sm font-sans font-light hover:text-sb-accent transition-colors duration-300 group"
-                >
-                  <Instagram size={16} strokeWidth={1.5} />
-                  Instagram
                   <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </a>
               </div>

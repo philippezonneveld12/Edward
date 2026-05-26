@@ -78,16 +78,6 @@ function ProjectItem({ index }: ProjectProps) {
           className="transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/30 pointer-events-none" aria-hidden="true" />
-
-        {/* Location badge */}
-        <div className="absolute top-6 left-6 z-10">
-          <span
-            className="inline-block px-3 py-1.5 border border-sb-border bg-black/55 font-sans text-sb-text-muted backdrop-blur-sm"
-            style={{ fontSize: '0.6875rem', letterSpacing: '0.15em' }}
-          >
-            {meta.location}
-          </span>
-        </div>
       </div>
 
       {/* Text area — 40% */}

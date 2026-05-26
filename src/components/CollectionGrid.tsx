@@ -7,14 +7,14 @@ import { useTranslation } from '@/i18n/translations'
 const EASE = [0.16, 1, 0.3, 1] as const
 
 const categoryMeta = [
-  { number: '01', image: '/images/brochure/rot-000.jpg', imageAlt: 'S+B laboratoriumwerkbanken — open lab met blauwe accenten', large: true },
-  { number: '02', image: '/images/brochure/rot-015.jpg', imageAlt: 'S+B practicumlokaal — lichte omgeving met extractiearm', large: false },
-  { number: '03', image: '/images/danone.jpg', imageAlt: 'Cleanroom interieur S+B', large: false },
-  { number: '04', image: '/images/brochure/rot-014.jpg', imageAlt: 'S+B industriële werkplekken — grijze werkstations met grote ramen', large: false },
-  { number: '05', image: '/images/brochure/rot-002.jpg', imageAlt: 'S+B afzuigkasten — S+B zuurkasten met blauwe accenten', large: true },
-  { number: '06', image: '/images/brochure/rot-016.jpg', imageAlt: 'S+B opslagsystemen — werkstations met geïntegreerde opslag', large: false },
-  { number: '07', image: '/images/brochure/rot-011.jpg', imageAlt: 'S+B ergonomische werkplekken — witte ovale werkbanken met blauw blad', large: false },
-  { number: '08', image: '/images/brochure/rot-001.jpg', imageAlt: 'S+B technische werkbanken — lab met groene accenten en grote ramen', large: false },
+  { number: '01', image: '/images/brochure/rot-000.jpg', imageAlt: 'S+B laboratoriumwerkbanken — open lab met blauwe accenten', large: true,  href: 'https://www.splusb.nl/lab' },
+  { number: '02', image: '/images/brochure/rot-015.jpg', imageAlt: 'S+B practicumlokaal — lichte omgeving met extractiearm', large: false,   href: 'https://www.splusb.nl/scholen' },
+  { number: '03', image: '/images/danone.jpg',            imageAlt: 'Cleanroom interieur S+B', large: false,                                    href: 'https://www.splusb.nl/lab' },
+  { number: '04', image: '/images/brochure/rot-014.jpg', imageAlt: 'S+B industriële werkplekken — grijze werkstations met grote ramen', large: false, href: 'https://www.splusb.nl/solid-factory' },
+  { number: '05', image: '/images/brochure/rot-002.jpg', imageAlt: 'S+B afzuigkasten — S+B zuurkasten met blauwe accenten', large: true,       href: 'https://www.splusb.nl/labair' },
+  { number: '06', image: '/images/brochure/rot-016.jpg', imageAlt: 'S+B opslagsystemen — werkstations met geïntegreerde opslag', large: false, href: 'https://www.splusb.nl/lab' },
+  { number: '07', image: '/images/brochure/rot-011.jpg', imageAlt: 'S+B ergonomische werkplekken — witte ovale werkbanken met blauw blad', large: false, href: 'https://www.splusb.nl/solid-factory' },
+  { number: '08', image: '/images/brochure/rot-001.jpg', imageAlt: 'S+B technische werkbanken — lab met groene accenten en grote ramen', large: false, href: 'https://www.splusb.nl/solid-factory' },
 ]
 
 interface CardProps {
@@ -28,8 +28,11 @@ interface CardProps {
 
 function CollectionCard({ meta, name, description, viewLabel, index, gridStyle }: CardProps) {
   return (
-    <motion.article
-      className="collection-card relative overflow-hidden cursor-pointer group bg-sb-surface"
+    <motion.a
+      href={meta.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="collection-card relative overflow-hidden cursor-pointer group bg-sb-surface block"
       style={{
         minHeight: meta.large ? '420px' : '300px',
         ...gridStyle,
@@ -89,7 +92,7 @@ function CollectionCard({ meta, name, description, viewLabel, index, gridStyle }
           </div>
         </div>
       </div>
-    </motion.article>
+    </motion.a>
   )
 }
 
