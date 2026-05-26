@@ -3,7 +3,7 @@ import { useTheme } from '@/contexts/ThemeContext'
 const nl = {
   nav: {
     links: ['Collectie', 'Projecten', 'Expertise', 'Divisies', 'Contact'],
-    cta: 'Offerte aanvragen',
+    cta: 'Plan een projectgesprek',
     mobileFooter: 'Est. 1987 — Nederland',
   },
   hero: {
@@ -27,7 +27,7 @@ const nl = {
       { name: 'Industriële interieurs', description: 'Robuuste industriële werkplekoplossingen' },
       { name: 'Ventilatiesystemen', description: 'Precisie luchttechniek & extractiesystemen' },
       { name: 'Opslagsystemen', description: 'Modulaire opslag & chemicaliënkasten' },
-      { name: 'Ergonomische werkplekken', description: 'Hoogteversttelbare, veiligheidsgerichte werkstations' },
+      { name: 'Ergonomische werkplekken', description: 'Hoogteverstelbare, veiligheidsgerichte werkstations' },
       { name: 'Technische werkbanken', description: 'Maatwerk technisch meubilair & werkbanksystemen' },
     ],
   },
@@ -62,7 +62,7 @@ const nl = {
   expertise: {
     overline: 'Vakkennis',
     heading: ['Expertise &', 'Vakkennis.'],
-    subheading: 'Bijna vier decennia ingenieurservaring vertaald in zes kerngebieden die de basis vormen van elk S+B-project. Van materiaalkennis tot luchttechniek — wij beheersen het complete spectrum.',
+    subheading: 'Meer dan een eeuw ingenieurservaring vertaald in zes kerngebieden die de basis vormen van elk S+B-project. Van materiaalkennis tot luchttechniek — wij beheersen het complete spectrum.',
     pillars: [
       { label: 'Veiligheid & Normen', description: 'Volledig conform NEN, ARBO en VPR-regelgeving. Elk ontwerp doorloopt een formeel veiligheidsauditproces.' },
       { label: 'Ergonomie', description: 'Hoogteverstelling, houding-geoptimaliseerde ontwerpen en antropometrische analyse voor elke werkplek.' },
@@ -148,7 +148,7 @@ const nl = {
     servicesHeading: 'Diensten',
     contactHeading: 'Contact',
     followHeading: 'Volg ons',
-    cta: 'Offerte aanvragen',
+    cta: 'Plan een projectgesprek',
     privacyLabel: 'Privacy',
     sitemapLabel: 'Sitemap',
     copyright: 'Alle rechten voorbehouden.',
@@ -161,7 +161,7 @@ type T = typeof nl
 const en: T = {
   nav: {
     links: ['Collection', 'Projects', 'Expertise', 'Divisions', 'Contact'],
-    cta: 'Request quote',
+    cta: 'Schedule a project call',
     mobileFooter: 'Est. 1987 — Netherlands',
   },
   hero: {
@@ -220,7 +220,7 @@ const en: T = {
   expertise: {
     overline: 'Knowledge',
     heading: ['Expertise &', 'Knowledge.'],
-    subheading: 'Nearly four decades of engineering experience translated into six core areas that form the foundation of every S+B project. From material knowledge to air technology — we master the complete spectrum.',
+    subheading: 'More than a century of engineering experience translated into six core areas that form the foundation of every S+B project. From material knowledge to air technology — we master the complete spectrum.',
     pillars: [
       { label: 'Safety & Standards', description: 'Fully compliant with NEN, ARBO and VPR regulations. Every design undergoes a formal safety audit process.' },
       { label: 'Ergonomics', description: 'Height adjustment, posture-optimised designs and anthropometric analysis for every workplace.' },
@@ -306,7 +306,7 @@ const en: T = {
     servicesHeading: 'Services',
     contactHeading: 'Contact',
     followHeading: 'Follow us',
-    cta: 'Request quote',
+    cta: 'Schedule a project call',
     privacyLabel: 'Privacy',
     sitemapLabel: 'Sitemap',
     copyright: 'All rights reserved.',
@@ -317,7 +317,7 @@ const en: T = {
 const de: T = {
   nav: {
     links: ['Kollektion', 'Projekte', 'Expertise', 'Abteilungen', 'Kontakt'],
-    cta: 'Angebot anfordern',
+    cta: 'Projektgespräch planen',
     mobileFooter: 'Gegr. 1987 — Niederlande',
   },
   hero: {
@@ -376,7 +376,7 @@ const de: T = {
   expertise: {
     overline: 'Fachwissen',
     heading: ['Expertise &', 'Fachwissen.'],
-    subheading: 'Fast vier Jahrzehnte Ingenieurerfahrung in sechs Kernbereichen, die die Grundlage jedes S+B-Projekts bilden. Von Materialwissen bis Lufttechnik — wir beherrschen das komplette Spektrum.',
+    subheading: 'Mehr als ein Jahrhundert Ingenieurerfahrung in sechs Kernbereichen, die die Grundlage jedes S+B-Projekts bilden. Von Materialwissen bis Lufttechnik — wir beherrschen das komplette Spektrum.',
     pillars: [
       { label: 'Sicherheit & Normen', description: 'Vollständig konform mit NEN, ARBO und VPR-Vorschriften. Jedes Design durchläuft einen formalen Sicherheitsauditprozess.' },
       { label: 'Ergonomie', description: 'Höhenverstellung, haltungsoptimierte Designs und anthropometrische Analyse für jeden Arbeitsplatz.' },
@@ -462,7 +462,7 @@ const de: T = {
     servicesHeading: 'Leistungen',
     contactHeading: 'Kontakt',
     followHeading: 'Folgen Sie uns',
-    cta: 'Angebot anfordern',
+    cta: 'Projektgespräch planen',
     privacyLabel: 'Datenschutz',
     sitemapLabel: 'Sitemap',
     copyright: 'Alle Rechte vorbehalten.',
@@ -473,7 +473,7 @@ const de: T = {
 const es: T = {
   nav: {
     links: ['Colección', 'Proyectos', 'Experiencia', 'Divisiones', 'Contacto'],
-    cta: 'Solicitar presupuesto',
+    cta: 'Planificar una reunión',
     mobileFooter: 'Fund. 1987 — Países Bajos',
   },
   hero: {
@@ -532,7 +532,7 @@ const es: T = {
   expertise: {
     overline: 'Conocimiento',
     heading: ['Experiencia &', 'Conocimiento.'],
-    subheading: 'Casi cuatro décadas de experiencia en ingeniería en seis áreas clave que forman la base de cada proyecto S+B. Del conocimiento de materiales a la tecnología del aire — dominamos el espectro completo.',
+    subheading: 'Más de un siglo de experiencia en ingeniería en seis áreas clave que forman la base de cada proyecto S+B. Del conocimiento de materiales a la tecnología del aire — dominamos el espectro completo.',
     pillars: [
       { label: 'Seguridad & Normas', description: 'Totalmente conforme con regulaciones NEN, ARBO y VPR. Cada diseño pasa por un proceso formal de auditoría de seguridad.' },
       { label: 'Ergonomía', description: 'Regulación de altura, diseños optimizados para la postura y análisis antropométrico para cada puesto de trabajo.' },
@@ -618,7 +618,7 @@ const es: T = {
     servicesHeading: 'Servicios',
     contactHeading: 'Contacto',
     followHeading: 'Síguenos',
-    cta: 'Solicitar presupuesto',
+    cta: 'Planificar una reunión',
     privacyLabel: 'Privacidad',
     sitemapLabel: 'Mapa del sitio',
     copyright: 'Todos los derechos reservados.',
@@ -629,7 +629,7 @@ const es: T = {
 const it: T = {
   nav: {
     links: ['Collezione', 'Progetti', 'Competenza', 'Divisioni', 'Contatto'],
-    cta: 'Richiedi preventivo',
+    cta: 'Pianifica una riunione',
     mobileFooter: 'Fond. 1987 — Paesi Bassi',
   },
   hero: {
@@ -688,7 +688,7 @@ const it: T = {
   expertise: {
     overline: 'Competenza',
     heading: ['Esperienza &', 'Competenza.'],
-    subheading: "Quasi quattro decenni di esperienza ingegneristica in sei aree chiave che costituiscono la base di ogni progetto S+B. Dalla conoscenza dei materiali alla tecnologia dell'aria — padroneggiamo lo spettro completo.",
+    subheading: "Più di un secolo di esperienza ingegneristica in sei aree chiave che costituiscono la base di ogni progetto S+B. Dalla conoscenza dei materiali alla tecnologia dell'aria — padroneggiamo lo spettro completo.",
     pillars: [
       { label: 'Sicurezza & Norme', description: 'Completamente conforme alle normative NEN, ARBO e VPR. Ogni progetto attraversa un processo formale di audit della sicurezza.' },
       { label: 'Ergonomia', description: "Regolazione dell'altezza, design ottimizzati per la postura e analisi antropometrica per ogni posto di lavoro." },
@@ -774,7 +774,7 @@ const it: T = {
     servicesHeading: 'Servizi',
     contactHeading: 'Contatto',
     followHeading: 'Seguici',
-    cta: 'Richiedi preventivo',
+    cta: 'Pianifica una riunione',
     privacyLabel: 'Privacy',
     sitemapLabel: 'Mappa del sito',
     copyright: 'Tutti i diritti riservati.',

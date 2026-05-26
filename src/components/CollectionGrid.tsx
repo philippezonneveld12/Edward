@@ -23,19 +23,18 @@ interface CardProps {
   description: string
   viewLabel: string
   index: number
-  gridStyle?: React.CSSProperties
+  gridClass?: string
 }
 
-function CollectionCard({ meta, name, description, viewLabel, index, gridStyle }: CardProps) {
+function CollectionCard({ meta, name, description, viewLabel, index, gridClass }: CardProps) {
   return (
     <motion.a
       href={meta.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="collection-card relative overflow-hidden cursor-pointer group bg-sb-surface block"
+      className={`collection-card relative overflow-hidden cursor-pointer group bg-sb-surface block${gridClass ? ` ${gridClass}` : ''}`}
       style={{
         minHeight: meta.large ? '420px' : '300px',
-        ...gridStyle,
       }}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -123,30 +122,16 @@ export default function CollectionGrid() {
 
         <hr className="rule mb-10" />
 
-        {/* Desktop grid — 3 columns with spanning */}
-        <div className="hidden lg:grid gap-3" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-          <CollectionCard meta={categoryMeta[0]} name={t.collection.categories[0].name} description={t.collection.categories[0].description} viewLabel={t.collection.viewLabel} index={0} gridStyle={{ gridColumn: '1 / 3' }} />
+        {/* Unified responsive grid — 1 col mobile / 2 col tablet / 3 col desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <CollectionCard meta={categoryMeta[0]} name={t.collection.categories[0].name} description={t.collection.categories[0].description} viewLabel={t.collection.viewLabel} index={0} gridClass="lg:col-span-2" />
           <CollectionCard meta={categoryMeta[1]} name={t.collection.categories[1].name} description={t.collection.categories[1].description} viewLabel={t.collection.viewLabel} index={1} />
           <CollectionCard meta={categoryMeta[2]} name={t.collection.categories[2].name} description={t.collection.categories[2].description} viewLabel={t.collection.viewLabel} index={2} />
-          <CollectionCard meta={categoryMeta[3]} name={t.collection.categories[3].name} description={t.collection.categories[3].description} viewLabel={t.collection.viewLabel} index={3} gridStyle={{ gridColumn: '2 / 4' }} />
+          <CollectionCard meta={categoryMeta[3]} name={t.collection.categories[3].name} description={t.collection.categories[3].description} viewLabel={t.collection.viewLabel} index={3} gridClass="lg:col-start-2 lg:col-span-2" />
           <CollectionCard meta={categoryMeta[4]} name={t.collection.categories[4].name} description={t.collection.categories[4].description} viewLabel={t.collection.viewLabel} index={4} />
           <CollectionCard meta={categoryMeta[5]} name={t.collection.categories[5].name} description={t.collection.categories[5].description} viewLabel={t.collection.viewLabel} index={5} />
           <CollectionCard meta={categoryMeta[6]} name={t.collection.categories[6].name} description={t.collection.categories[6].description} viewLabel={t.collection.viewLabel} index={6} />
           <CollectionCard meta={categoryMeta[7]} name={t.collection.categories[7].name} description={t.collection.categories[7].description} viewLabel={t.collection.viewLabel} index={7} />
-        </div>
-
-        {/* Tablet grid — 2 columns */}
-        <div className="hidden md:grid lg:hidden gap-3" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-          {categoryMeta.map((meta, i) => (
-            <CollectionCard key={meta.number} meta={meta} name={t.collection.categories[i].name} description={t.collection.categories[i].description} viewLabel={t.collection.viewLabel} index={i} />
-          ))}
-        </div>
-
-        {/* Mobile grid — 1 column */}
-        <div className="grid md:hidden gap-3">
-          {categoryMeta.map((meta, i) => (
-            <CollectionCard key={meta.number} meta={meta} name={t.collection.categories[i].name} description={t.collection.categories[i].description} viewLabel={t.collection.viewLabel} index={i} />
-          ))}
         </div>
       </div>
     </section>

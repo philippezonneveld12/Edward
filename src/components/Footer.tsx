@@ -125,7 +125,7 @@ export default function Footer() {
                 </a>
               </div>
               <a
-                href="mailto:info@splusb.nl?subject=Offerte aanvragen"
+                href="mailto:info@splusb.nl?subject=Projectgesprek plannen"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-sb-border text-sb-accent text-xs font-sans font-light tracking-widest uppercase hover:border-sb-accent transition-all duration-300"
               >
                 {t.footer.cta}
