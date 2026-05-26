@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Linkedin, Instagram, ArrowUpRight } from 'lucide-react'
+import { useTranslation } from '@/i18n/translations'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -13,17 +14,11 @@ const divisions = [
   { name: 'Schaik & Berghuis', href: '#divisies' },
 ]
 
-const services = [
-  { name: 'Labomeubilair', href: '#collectie' },
-  { name: 'Practicumlokalen', href: '#collectie' },
-  { name: 'Cleanrooms', href: '#collectie' },
-  { name: 'Industriële interieurs', href: '#collectie' },
-  { name: 'Ventilatiesystemen', href: '#collectie' },
-  { name: 'Technische werkbanken', href: '#collectie' },
-]
+const serviceHrefs = ['#collectie', '#collectie', '#collectie', '#collectie', '#collectie', '#collectie']
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const t = useTranslation()
 
   return (
     <footer
@@ -32,7 +27,6 @@ export default function Footer() {
       className="bg-sb-black"
       style={{ borderTop: '1px solid var(--color-border)' }}
     >
-      {/* Main footer content */}
       <div className="container-sb">
         <motion.div
           className="py-16 lg:py-20"
@@ -52,7 +46,7 @@ export default function Footer() {
               S<span className="text-sb-accent">+</span>B
             </a>
             <p className="font-sans font-light text-sb-text-muted text-sm max-w-sm" style={{ lineHeight: '1.7' }}>
-              100 jaar marktleider in laboratoriuminterieurs, practicumlokalen en industriële werkplekken op maat. Gevestigd in Capelle aan den IJssel, actief in heel Europa.
+              {t.footer.tagline}
             </p>
           </div>
 
@@ -61,7 +55,7 @@ export default function Footer() {
             {/* Column 1: Company */}
             <div className="col-span-2 md:col-span-1">
               <h4 className="font-sans font-medium text-sb-text text-xs tracking-widest uppercase mb-5">
-                S+B Groep
+                {t.footer.companyHeading}
               </h4>
               <div className="space-y-3">
                 <p className="font-sans font-light text-sb-text-muted text-sm" style={{ lineHeight: '1.7' }}>
@@ -73,10 +67,10 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Column 2: Divisies */}
+            {/* Column 2: Divisions */}
             <div>
               <h4 className="font-sans font-medium text-sb-text text-xs tracking-widest uppercase mb-5">
-                Divisies
+                {t.footer.divisionsHeading}
               </h4>
               <ul className="space-y-2.5" role="list">
                 {divisions.map((item) => (
@@ -92,19 +86,19 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Column 3: Diensten */}
+            {/* Column 3: Services */}
             <div>
               <h4 className="font-sans font-medium text-sb-text text-xs tracking-widest uppercase mb-5">
-                Diensten
+                {t.footer.servicesHeading}
               </h4>
               <ul className="space-y-2.5" role="list">
-                {services.map((item) => (
-                  <li key={item.name}>
+                {t.footer.services.map((name, i) => (
+                  <li key={i}>
                     <a
-                      href={item.href}
+                      href={serviceHrefs[i]}
                       className="font-sans font-light text-sb-text-muted text-sm hover:text-sb-text transition-colors duration-300"
                     >
-                      {item.name}
+                      {name}
                     </a>
                   </li>
                 ))}
@@ -114,7 +108,7 @@ export default function Footer() {
             {/* Column 4: Contact */}
             <div>
               <h4 className="font-sans font-medium text-sb-text text-xs tracking-widest uppercase mb-5">
-                Contact
+                {t.footer.contactHeading}
               </h4>
               <div className="space-y-3 mb-6">
                 <a
@@ -134,14 +128,14 @@ export default function Footer() {
                 href="#contact"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-sb-border text-sb-accent text-xs font-sans font-light tracking-widest uppercase hover:border-sb-accent transition-all duration-300"
               >
-                Offerte aanvragen
+                {t.footer.cta}
               </a>
             </div>
 
             {/* Column 5: Social */}
             <div>
               <h4 className="font-sans font-medium text-sb-text text-xs tracking-widest uppercase mb-5">
-                Volg ons
+                {t.footer.followHeading}
               </h4>
               <div className="flex flex-col gap-3">
                 <a
@@ -170,11 +164,9 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom bar */}
-        <div
-          className="flex flex-col md:flex-row items-center justify-between gap-4 py-6 border-t border-sb-border"
-        >
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-6 border-t border-sb-border">
           <p className="font-sans font-light text-sb-text-dim text-xs order-2 md:order-1">
-            © {currentYear} Schaik & Berghuis Groep B.V. — Alle rechten voorbehouden.
+            © {currentYear} Schaik & Berghuis Groep B.V. — {t.footer.copyright}
           </p>
 
           <div className="flex items-center gap-6 order-1 md:order-2">
@@ -182,23 +174,14 @@ export default function Footer() {
               href="/privacy"
               className="font-sans font-light text-sb-text-dim text-xs hover:text-sb-text-muted transition-colors duration-300"
             >
-              Privacy
+              {t.footer.privacyLabel}
             </a>
             <a
               href="/sitemap"
               className="font-sans font-light text-sb-text-dim text-xs hover:text-sb-text-muted transition-colors duration-300"
             >
-              Sitemap
+              {t.footer.sitemapLabel}
             </a>
-            <div className="flex items-center gap-2">
-              <button className="font-sans font-light text-sb-accent text-xs hover:text-sb-accent-light transition-colors duration-300 tracking-wide">
-                NL
-              </button>
-              <span className="text-sb-text-dim text-xs">/</span>
-              <button className="font-sans font-light text-sb-text-dim text-xs hover:text-sb-text-muted transition-colors duration-300 tracking-wide">
-                EN
-              </button>
-            </div>
           </div>
         </div>
       </div>

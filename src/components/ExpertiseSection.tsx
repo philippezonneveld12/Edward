@@ -2,43 +2,15 @@
 
 import { motion } from 'framer-motion'
 import { Shield, Activity, Wind, Leaf, Layers, Settings2 } from 'lucide-react'
+import { useTranslation } from '@/i18n/translations'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
-const pillars = [
-  {
-    icon: Shield,
-    label: 'Veiligheid & Normen',
-    description: 'Volledig conform NEN, ARBO en VPR-regelgeving. Elk ontwerp doorloopt een formeel veiligheidsauditproces.',
-  },
-  {
-    icon: Activity,
-    label: 'Ergonomie',
-    description: 'Hoogteverstelling, houding-geoptimaliseerde ontwerpen en antropometrische analyse voor elke werkplek.',
-  },
-  {
-    icon: Wind,
-    label: 'Luchttechniek',
-    description: 'Nauwkeurige luchtstromingsberekeningen, extractiesystemen en cleanroomklasse-engineering.',
-  },
-  {
-    icon: Leaf,
-    label: 'Duurzaamheid',
-    description: 'Materialen met lange levenscyclus, Europese fabricage en circulair ontwerp als standaard.',
-  },
-  {
-    icon: Layers,
-    label: 'Materiaalkennis',
-    description: 'HPL, roestvrij staal, Corian, epoxy en gespecialiseerde oppervlakken voor iedere toepassing.',
-  },
-  {
-    icon: Settings2,
-    label: 'Maatwerk Engineering',
-    description: 'Van concept tot productie: CAD-ontwerp, prototyping en fabriekslijn in eigen beheer.',
-  },
-]
+const icons = [Shield, Activity, Wind, Leaf, Layers, Settings2]
 
 export default function ExpertiseSection() {
+  const t = useTranslation()
+
   return (
     <section id="expertise" aria-label="Expertise & Vakkennis" className="section-padding bg-sb-surface">
       <div className="container-sb">
@@ -50,13 +22,13 @@ export default function ExpertiseSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
         >
-          <p className="overline mb-4">Vakkennis</p>
+          <p className="overline mb-4">{t.expertise.overline}</p>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <h2 className="font-serif text-display-lg text-sb-text font-light max-w-lg">
-              Expertise &<br />Vakkennis.
+              {t.expertise.heading[0]}<br />{t.expertise.heading[1]}
             </h2>
             <p className="font-sans font-light text-sb-text-muted text-base max-w-md" style={{ lineHeight: '1.75' }}>
-              Bijna vier decennia ingenieurservaring vertaald in zes kerngebieden die de basis vormen van elk S+B-project. Van materiaalkennis tot luchttechniek — wij beheersen het complete spectrum.
+              {t.expertise.subheading}
             </p>
           </div>
         </motion.div>
@@ -65,8 +37,8 @@ export default function ExpertiseSection() {
 
         {/* Pillars grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-sb-border">
-          {pillars.map((pillar, i) => {
-            const Icon = pillar.icon
+          {t.expertise.pillars.map((pillar, i) => {
+            const Icon = icons[i]
             return (
               <motion.div
                 key={pillar.label}

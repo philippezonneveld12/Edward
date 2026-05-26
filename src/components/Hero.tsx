@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslation } from '@/i18n/translations'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -27,6 +28,7 @@ const itemVariants = {
 
 export default function Hero() {
   const scrollRef = useRef<HTMLDivElement>(null)
+  const t = useTranslation()
 
   return (
     <section
@@ -88,7 +90,7 @@ export default function Hero() {
           className="font-sans"
           style={{ fontSize: '0.625rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}
         >
-          S+B — 100 Jaar Marktleider
+          {t.hero.badge}
         </span>
       </motion.div>
 
@@ -103,7 +105,7 @@ export default function Hero() {
           >
             {/* Overline */}
             <motion.p variants={itemVariants} className="overline mb-6" style={{ color: '#C4B49A' }}>
-              Laboratorium&nbsp;·&nbsp;Onderwijs&nbsp;·&nbsp;Industrie
+              {t.hero.overline}
             </motion.p>
 
             {/* Main headline */}
@@ -112,11 +114,11 @@ export default function Hero() {
               className="font-serif text-display-xl mb-6 leading-none"
               style={{ color: '#F4F1EC' }}
             >
-              Gebouwd voor
+              {t.hero.heading[0]}
               <br />
-              laboratoria, onderwijs
+              {t.hero.heading[1]}
               <br />
-              en industrie.
+              {t.hero.heading[2]}
             </motion.h1>
 
             {/* Subheadline */}
@@ -125,7 +127,7 @@ export default function Hero() {
               className="font-sans font-light text-lg md:text-xl max-w-xl mb-10"
               style={{ lineHeight: '1.6', color: 'rgba(244,241,236,0.65)' }}
             >
-              Custom engineered environments designed for performance, safety and longevity.
+              {t.hero.subtitle}
             </motion.p>
 
             {/* CTAs */}
@@ -140,7 +142,7 @@ export default function Hero() {
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#9A8A6C'; (e.currentTarget as HTMLElement).style.color = '#C4B49A' }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(244,241,236,0.3)'; (e.currentTarget as HTMLElement).style.color = '#F4F1EC' }}
               >
-                Bekijk collectie
+                {t.hero.cta1}
               </a>
               <a
                 href="#projecten"
@@ -149,7 +151,7 @@ export default function Hero() {
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#C4B49A' }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(244,241,236,0.6)' }}
               >
-                Projecten
+                {t.hero.cta2}
                 <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
                   →
                 </span>
@@ -171,7 +173,7 @@ export default function Hero() {
           className="font-sans"
           style={{ fontSize: '0.625rem', letterSpacing: '0.2em', textTransform: 'uppercase', writingMode: 'vertical-lr', color: 'rgba(255,255,255,0.35)' }}
         >
-          Scroll
+          {t.hero.scroll}
         </span>
         <motion.div
           className="w-px origin-top"

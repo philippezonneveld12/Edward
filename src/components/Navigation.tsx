@@ -4,14 +4,9 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Sun, Moon, ChevronDown } from 'lucide-react'
 import { useTheme, LANGUAGES, type Language } from '@/contexts/ThemeContext'
+import { useTranslation } from '@/i18n/translations'
 
-const navLinks = [
-  { label: 'Collectie', href: '#collectie' },
-  { label: 'Projecten', href: '#projecten' },
-  { label: 'Expertise', href: '#expertise' },
-  { label: 'Divisies', href: '#divisies' },
-  { label: 'Contact', href: '#contact' },
-]
+const navHrefs = ['#collectie', '#projecten', '#expertise', '#divisies', '#contact']
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -21,6 +16,8 @@ export default function Navigation() {
   const [langOpen, setLangOpen] = useState(false)
   const langRef = useRef<HTMLDivElement>(null)
   const { theme, toggleTheme, language, setLanguage, mounted } = useTheme()
+  const t = useTranslation()
+  const navLinks = navHrefs.map((href, i) => ({ href, label: t.nav.links[i] }))
 
   const isDark = theme === 'dark'
   // Over hero = always white; scrolled on dark theme = white; scrolled on light = dark
@@ -200,7 +197,7 @@ export default function Navigation() {
                   el.style.backgroundColor = 'transparent'
                 }}
               >
-                Offerte aanvragen
+                {t.nav.cta}
               </a>
 
               {/* Mobile: lang + theme + hamburger */}
@@ -335,13 +332,13 @@ export default function Navigation() {
                   className="inline-flex items-center gap-3 px-8 py-4 text-[13px] font-sans font-[500] tracking-widest uppercase transition-all duration-300"
                   style={{ border: '1px solid var(--color-accent)', color: 'var(--color-accent)' }}
                 >
-                  Offerte aanvragen
+                  {t.nav.cta}
                 </a>
               </motion.div>
             </div>
 
             <div className="px-8 pb-12 text-[12px] font-sans" style={{ color: 'var(--color-text-dim)' }}>
-              Est. 1987 — Nederland
+              {t.nav.mobileFooter}
             </div>
           </motion.div>
         )}
