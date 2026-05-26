@@ -37,13 +37,13 @@ export default function Hero() {
     >
       {/* Full-bleed hero photograph */}
       <Image
-        src="/images/hero-lab.jpg"
-        alt="S+B laboratoriuminterieur — witte werkbanken met blauwe accenten"
+        src="/images/brochure/rot-018-10.jpg"
+        alt="S+B laboratoriuminterieur — witte ronde werkbanken met blauwe accenten in lichte ruimte"
         fill
         priority
         sizes="100vw"
-        style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
-        className="opacity-55"
+        style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
+        className="opacity-70"
         aria-hidden="true"
       />
       {/* Dark gradient overlay for text legibility */}
