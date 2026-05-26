@@ -157,6 +157,23 @@ export default function Hero() {
                 </span>
               </a>
             </motion.div>
+
+            {/* Trust signals */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-wrap gap-x-6 gap-y-2 mt-2"
+            >
+              {t.hero.trustSignals.map((signal) => (
+                <span
+                  key={signal}
+                  className="inline-flex items-center gap-2 font-sans font-light text-xs tracking-wide"
+                  style={{ color: 'rgba(244,241,236,0.45)' }}
+                >
+                  <span style={{ color: '#9A8A6C', fontSize: '0.5rem' }}>◆</span>
+                  {signal}
+                </span>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </div>
