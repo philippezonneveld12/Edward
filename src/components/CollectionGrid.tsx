@@ -59,7 +59,7 @@ function CollectionCard({ meta, name, description, viewLabel, index, gridClass }
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at 50% 0%, transparent 60%, rgba(11,11,9,0.35) 100%)',
+          background: 'linear-gradient(to top, rgba(11,11,9,0.82) 0%, rgba(11,11,9,0.15) 55%, transparent 80%)',
         }}
         aria-hidden="true"
       />
@@ -127,11 +127,11 @@ export default function CollectionGrid() {
           <CollectionCard meta={categoryMeta[0]} name={t.collection.categories[0].name} description={t.collection.categories[0].description} viewLabel={t.collection.viewLabel} index={0} gridClass="lg:col-span-2" />
           <CollectionCard meta={categoryMeta[1]} name={t.collection.categories[1].name} description={t.collection.categories[1].description} viewLabel={t.collection.viewLabel} index={1} />
           <CollectionCard meta={categoryMeta[2]} name={t.collection.categories[2].name} description={t.collection.categories[2].description} viewLabel={t.collection.viewLabel} index={2} />
-          <CollectionCard meta={categoryMeta[3]} name={t.collection.categories[3].name} description={t.collection.categories[3].description} viewLabel={t.collection.viewLabel} index={3} gridClass="lg:col-start-2 lg:col-span-2" />
-          <CollectionCard meta={categoryMeta[4]} name={t.collection.categories[4].name} description={t.collection.categories[4].description} viewLabel={t.collection.viewLabel} index={4} />
+          <CollectionCard meta={categoryMeta[3]} name={t.collection.categories[3].name} description={t.collection.categories[3].description} viewLabel={t.collection.viewLabel} index={3} gridClass="lg:col-span-2" />
+          <CollectionCard meta={categoryMeta[4]} name={t.collection.categories[4].name} description={t.collection.categories[4].description} viewLabel={t.collection.viewLabel} index={4} gridClass="lg:col-span-2" />
           <CollectionCard meta={categoryMeta[5]} name={t.collection.categories[5].name} description={t.collection.categories[5].description} viewLabel={t.collection.viewLabel} index={5} />
           <CollectionCard meta={categoryMeta[6]} name={t.collection.categories[6].name} description={t.collection.categories[6].description} viewLabel={t.collection.viewLabel} index={6} />
-          <CollectionCard meta={categoryMeta[7]} name={t.collection.categories[7].name} description={t.collection.categories[7].description} viewLabel={t.collection.viewLabel} index={7} />
+          <CollectionCard meta={categoryMeta[7]} name={t.collection.categories[7].name} description={t.collection.categories[7].description} viewLabel={t.collection.viewLabel} index={7} gridClass="lg:col-span-2" />
         </div>
       </div>
     </section>
