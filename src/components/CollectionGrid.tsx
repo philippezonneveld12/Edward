@@ -48,7 +48,7 @@ function CollectionCard({ meta, name, description, viewLabel, index, gridClass }
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         style={{ objectFit: 'cover', objectPosition: 'center' }}
-        className="transition-transform duration-700 group-hover:scale-105 opacity-75"
+        className="transition-transform duration-700 group-hover:scale-105 opacity-95"
       />
 
       <div
@@ -59,7 +59,7 @@ function CollectionCard({ meta, name, description, viewLabel, index, gridClass }
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at 50% 0%, transparent 60%, rgba(11,11,9,0.6) 100%)',
+          background: 'radial-gradient(ellipse at 50% 0%, transparent 60%, rgba(11,11,9,0.35) 100%)',
         }}
         aria-hidden="true"
       />
