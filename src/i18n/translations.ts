@@ -163,6 +163,10 @@ const nl = {
     copyright: 'Alle rechten voorbehouden.',
     services: ['Zuurkasten & afzuiging', 'Laboratoriumwerkbanken', 'Practicumlokalen', 'Cleanrooms', 'Onderhoud & inspectie', 'Maatwerk interieurs'],
   },
+  meta: {
+    title: 'S+B Groep | Laboratoriuminterieur, Scholen & Industriële Werkplekken',
+    description: 'S+B Groep levert premium laboratoriuminterieurs, practicumlokalen, cleanrooms en industriële werkplekken op maat. Specialist in technisch meubilair voor Nederland en Europa.',
+  },
 }
 
 type T = typeof nl
@@ -330,6 +334,10 @@ const en: T = {
     copyright: 'All rights reserved.',
     services: ['Fume Hoods & Extraction', 'Laboratory Workbenches', 'Practice Rooms', 'Cleanrooms', 'Maintenance & Inspection', 'Custom Interiors'],
   },
+  meta: {
+    title: 'S+B Group | Laboratory Interiors, Schools & Industrial Workplaces',
+    description: 'S+B Group delivers premium laboratory interiors, practice rooms, cleanrooms and custom industrial workplaces. Specialist in technical furniture for the Netherlands and Europe.',
+  },
 }
 
 const de: T = {
@@ -494,6 +502,10 @@ const de: T = {
     sitemapLabel: 'Sitemap',
     copyright: 'Alle Rechte vorbehalten.',
     services: ['Abzüge & Absaugung', 'Laborwerkbänke', 'Übungsräume', 'Reinräume', 'Wartung & Inspektion', 'Maßinterieurs'],
+  },
+  meta: {
+    title: 'S+B Gruppe | Laborinterieurs, Schulen & Industrielle Arbeitsplätze',
+    description: 'S+B Gruppe liefert erstklassige Laborinterieurs, Übungsräume, Reinräume und industrielle Arbeitsplätze auf Maß. Spezialist für technische Möbel in den Niederlanden und Europa.',
   },
 }
 
@@ -660,6 +672,10 @@ const es: T = {
     copyright: 'Todos los derechos reservados.',
     services: ['Vitrinas y extracción', 'Bancadas de laboratorio', 'Aulas prácticas', 'Salas limpias', 'Mantenimiento e inspección', 'Interiores a medida'],
   },
+  meta: {
+    title: 'S+B Grupo | Interiores de Laboratorio, Escuelas y Espacios Industriales',
+    description: 'S+B Grupo ofrece interiores de laboratorio premium, aulas prácticas, salas limpias y espacios de trabajo industriales a medida. Especialista en mobiliario técnico para Europa.',
+  },
 }
 
 const it: T = {
@@ -824,6 +840,10 @@ const it: T = {
     sitemapLabel: 'Mappa del sito',
     copyright: 'Tutti i diritti riservati.',
     services: ['Cappe e aspirazione', 'Banconi da laboratorio', 'Aule pratiche', 'Camere bianche', 'Manutenzione e ispezione', 'Interni su misura'],
+  },
+  meta: {
+    title: 'S+B Gruppo | Interni per Laboratori, Scuole e Spazi Industriali',
+    description: "S+B Gruppo fornisce interni per laboratori premium, aule pratiche, camere bianche e spazi di lavoro industriali su misura. Specialista in arredi tecnici per i Paesi Bassi e l'Europa.",
   },
 }
 

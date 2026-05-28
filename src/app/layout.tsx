@@ -91,7 +91,7 @@ const organizationSchema = {
   legalName: 'Schaik & Berghuis Groep B.V.',
   url: 'https://www.splusb.nl',
   logo: 'https://www.splusb.nl/logo.svg',
-  foundingDate: '1987',
+  foundingDate: '1899',
   foundingLocation: {
     '@type': 'Place',
     addressCountry: 'NL',

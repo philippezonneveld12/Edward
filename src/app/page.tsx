@@ -8,10 +8,12 @@ import ProductVisuals from '@/components/ProductVisuals'
 import TrustAuthority from '@/components/TrustAuthority'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
+import DynamicMeta from '@/components/DynamicMeta'
 
 export default function Home() {
   return (
     <>
+      <DynamicMeta />
       <header>
         <Navigation />
       </header>
